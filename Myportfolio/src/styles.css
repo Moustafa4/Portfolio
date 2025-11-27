@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 /* fonts */
-
+body {
+  background: #121212;
+}
 @font-face {
   font-family: 'PoetsenOne';
   src: url('/font/PoetsenOne-Regular.ttf') format('truetype');
@@ -8,4 +10,3 @@
   font-style: normal;
   font-display: swap;
 }
-
