@@ -4,9 +4,23 @@ body {
   background: #121212;
 }
 @font-face {
-  font-family: 'PoetsenOne';
-  src: url('/font/PoetsenOne-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'lato-r';
+  src: url('/font/Lato-Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'lato-b';
+  src: url('/font/Lato-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'lato-bl';
+  src: url('/font/Lato-Black.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }

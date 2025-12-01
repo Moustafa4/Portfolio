@@ -1,0 +1,44 @@
+.tex-con .col-lg-3 {
+  /* margin-right:40px ; */
+  border: 1px solid red;
+}
+.tex-con {
+  margin-top: 150px;
+}
+.texcon {
+  min-width: 800px;
+  min-height: 98px;
+  margin: 0px auto;
+  color: white;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.texcon p {
+  margin-top: 18px;
+}
+
+.col-lg-3 .card i {
+  margin: 0px auto;
+  font-size: 55px;
+  margin-bottom: 16px;
+  text-align: center;
+  display: inline-block;
+  color: #fd6f00;
+  width: 70px;
+  height: 70px;
+}
+.tex-con .col-lg-3 h6 {
+  font-family: 'lato-bl';
+  font-size: 21px;
+  margin-bottom: 34px;
+  color: #fd6f00;
+}
+.tex-con .col-lg-3 p {
+  font-family: 'lato-r';
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.612);
+}
+.card {
+  background: rgba(255, 255, 255, 0.053);
+  border-radius: 24px;
+}

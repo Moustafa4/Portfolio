@@ -1,10 +1,9 @@
-/* test */
-.hleft {
-  height: auto;
+.main-row {
+  min-height: 781px;
 }
-.left,
-.so_icons,
-.exp {
+/* test */
+.exp,
+.tex-con {
   border: 3px solid white;
   padding-top: 16px;
 }
@@ -17,12 +16,131 @@
 }
 /* ******* */
 /* left part */
+.left {
+  /* padding-top: 90px; */
+  position: relative;
+  align-self: center;
+}
+/* animations */
+.container-typing {
+  display: block;
+  width: fit-content;
+}
+.typing {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid transparent;
+  width: 0;
+}
+@keyframes showborder2 {
+  to {
+    border-image: linear-gradient(45deg, #984300 0%, #fd6f00 46%, #ca5900 100%) 1;
+  }
+}
+@keyframes blinking2 {
+  50% {
+    border-image: linear-gradient(transparent, transparent) 1;
+  }
+}
+
+@keyframes showborder {
+  to {
+    border-color: #707070;
+  }
+}
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes hidingbordre {
+  to {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes slider {
+  100% {
+    transform: translateY(calc(-2 * 7em));
+  }
+}
+@keyframes typingCycle {
+  0% {
+    width: 0;
+  }
+  35% {
+    width: 100%;
+  } /* نهاية الكتابة */
+  65% {
+    width: 100%;
+  } /* نهاية الوقفة */
+  100% {
+    width: 0;
+  } /* نهاية المسح */
+}
+/* icons hover */
+@keyframes hoverEffect {
+  0% {
+    transform: rotate(0deg);
+
+    color: #bababa;
+  }
+  100% {
+    transform: rotate(360deg);
+    color: #fd6f00;
+  }
+}
+
+/* ========== */
+.l1 {
+  animation: showborder 0s 0s forwards, typing 1s steps(7) 0s forwards,
+    blinking 0.6s step-end 0s infinite, hidingbordre 0s 1.5s forwards;
+}
+.l2 {
+  animation: showborder 0s 2s forwards, typing 1.5s steps(16) 2s forwards,
+    blinking 0.6s step-end 2s infinite, hidingbordre 0s 4s forwards;
+}
+.container-typing2 ol li {
+  animation: slider calc(2 * 4 * 3s) steps(2) 4s infinite;
+}
+
+.container-typing2 ol li span {
+  white-space: nowrap;
+  display: inline-block;
+  border-right: 4px solid transparent;
+  width: 0;
+  animation: showborder2 0s 4s forwards, typingCycle 12s steps(50) 4s infinite,
+    blinking2 0.6s step-end 4s infinite, hidingbordre 0s 4s infinite;
+}
+.container-typing2 ol {
+  padding: 0;
+  list-style: none;
+  --height: 5.5em;
+  height: var(--height);
+  line-height: var(--height);
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+.container-typing2 {
+  margin: 24px 0px 17px 0px;
+}
+
 p,
+
 h5,
 .job,
 .exp .text,
 .exp .num {
-  font-family: 'lato' sans-serif;
+  font-family: lato, sans-serif;
   letter-spacing: 3%;
 }
 p {
@@ -37,11 +155,9 @@ h5 {
   color: #959595;
 }
 .job {
-  margin: 24px 0px;
-  font-size: 70px;
-  font-weight: black;
+  font-size: 50px;
+  font-weight: bold;
   background: linear-gradient(45deg, #984300 0%, #fd6f00 46%, #ca5900 100%);
-  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
@@ -56,17 +172,6 @@ h5 {
 
 .so_icons a i:hover {
   animation: hoverEffect 0.9s ease-in-out;
-}
-@keyframes hoverEffect {
-  0% {
-    transform: rotate(0deg);
-
-    color: #bababa;
-  }
-  100% {
-    transform: rotate(360deg);
-    color: #fd6f00;
-  }
 }
 
 .so_icons a i:hover {
@@ -93,6 +198,10 @@ h5 {
 /* exp part */
 .exp {
   margin-top: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.176);
+  box-shadow: -3px -1px 12px 3px #bf5f167a;
+  border-radius: 10px;
+  padding: 10px;
 }
 .exp .col-4 {
   padding: 6px 0px 6px 30px;
@@ -112,6 +221,43 @@ h5 {
   font-weight: bold;
   color: #dfdfdf;
 }
+.bac-fill {
+  z-index: -99;
+  position: absolute;
+  top: -65px;
+  background-image: url('/img/Vector.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 600.65px;
+  height: 516.74px;
+}
+
 /* end */
 
 /* right part */
+.right {
+  position: relative;
+  padding-top: 50px;
+}
+.container-img {
+  position: absolute;
+
+  /* border: 1px solid green; */
+  background: hsla(0, 0%, 100%, 0.04);
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  bottom: 3px;
+  right: 0;
+}
+.right img {
+  position: absolute;
+  object-position: center;
+  object-fit: fill;
+  bottom: 4px;
+  right: -5px;
+  height: 781px;
+  border-radius: 291px;
+}
+
