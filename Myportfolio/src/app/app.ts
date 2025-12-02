@@ -2,13 +2,14 @@ import { Component, signal } from '@angular/core';
 import { Home } from './componnent/home/home';
 import { Header } from './componnent/header/header';
 import { RouterModule } from "@angular/router";
-import { ServicesPart } from "./componnent/services-part/services-part";
-
+import { ServicesPart } from './componnent/home_parts/services-part/services-part';
+import { AboutMe } from "./componnent/home_parts/about-me/about-me";
 @Component({
   selector: 'app-root',
-  imports: [Home, Header, RouterModule, ServicesPart],
+  standalone: true,
+  imports: [Home, Header, RouterModule, ServicesPart, AboutMe],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css'],
 })
 export class App {
   protected readonly title = signal('portfolio');
