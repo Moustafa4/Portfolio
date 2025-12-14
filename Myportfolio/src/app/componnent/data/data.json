@@ -1,0 +1,70 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "type": "wordpress",
+      "title": "Personal Portfolio",
+      "shortDescription": "Single-page portfolio built with Angular to showcase my front-end work.",
+      "imag": "/img/p1.jpg",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "SCSS"],
+      "liveUrl": "https://your-domain.com",
+      "githubUrl": "https://github.com/your-username/portfolio"
+    },
+    {
+      "id": 2,
+      "type": "js",
+      "title": "Weather App",
+      "shortDescription": "Responsive weather dashboard that consumes a public API.",
+      "imag": "/img/p2.jpg",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "REST API"],
+      "liveUrl": "https://your-domain.com/weather",
+      "githubUrl": "https://github.com/your-username/weather-app"
+    },
+    {
+      "id": 3,
+      "type": "wordpress",
+      "title": "Task Manager",
+      "shortDescription": "Kanban-style task manager with drag-and-drop interaction.",
+      "imag": "/img/p3.jpg",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
+      "liveUrl": "https://your-domain.com/tasks",
+      "githubUrl": "https://github.com/your-username/task-manager"
+    },
+    {
+      "id": 4,
+      "type": "Custom Code",
+      "title": "Fasco",
+      "shortDescription": "Kanban-style task manager with drag-and-drop interaction.",
+      "imag": "/img/p4.jpg",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
+      "liveUrl": "https://your-domain.com/tasks",
+      "githubUrl": "https://github.com/your-username/task-manager"
+    },
+    {
+      "id": 5,
+      "type": "Custom Code",
+      "title": "Fasco",
+      "shortDescription": "Kanban-style task manager with drag-and-drop interaction.",
+      "imag": "img/p1.jpg",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
+      "liveUrl": "https://your-domain.com/tasks",
+      "githubUrl": "https://github.com/your-username/task-manager"
+    },
+    {
+      "id": 6,
+      "type": "Custom Code",
+      "title": "Fasco",
+      "shortDescription": "Kanban-style task manager with drag-and-drop interaction.",
+      "imag": "/img/p2.jpg",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
+      "liveUrl": "https://your-domain.com/tasks",
+      "githubUrl": "https://github.com/your-username/task-manager"
+    }
+  ]
+}
