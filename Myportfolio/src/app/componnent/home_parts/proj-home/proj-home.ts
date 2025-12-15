@@ -1,4 +1,4 @@
-import { Component, computed, inject, OnInit } from '@angular/core';
+import { Component, computed, inject, OnInit, signal, Signal } from '@angular/core';
 import { ProjectServices } from '../../../Services/project-services';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -17,12 +17,28 @@ import { IProjects } from './iprojects';
 })
 export class ProjHome {
   private proj_service = inject(ProjectServices);
+
+  itemsToShow = signal(3);
+
   private projects$ = this.proj_service
     .getProjectByType()
     .pipe(map((res) => res ?? ([] as IProjects[])));
+
+  // to transform from data from obse to signal
   _projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
 
+  AllProjects = computed(() => this._projects().slice(0, this.itemsToShow()));
+  // all data len
+  AlldataLength = computed(() => this._projects().length);
   _customcode = computed(() =>
-    this._projects().filter((p) => p.type.toLowerCase() === 'custom code')
+    this._projects()
+      .filter((p) => p.type.toLowerCase() === 'custom code')
+      .slice(0, this.itemsToShow())
   );
+
+  // Custom len
+  customCodeLength = computed(
+    () => this._projects().filter((p) => p.type.toLowerCase() === 'custom code').length
+  );
+All: any;
 }

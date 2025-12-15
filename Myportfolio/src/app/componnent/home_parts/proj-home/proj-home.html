@@ -3,16 +3,24 @@
     <div class="col-12" style="border: 1px solid red">
       <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" data-bs-toggle="tab" href="#Lor1">All</a>
+          <a class="nav-link active" data-bs-toggle="tab" href="#All" (click)="itemsToShow.set(3)"
+            >All</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#Lor2">Custom Code</a>
+          <a class="nav-link" data-bs-toggle="tab" href="#CustomCode" (click)="itemsToShow.set(3)"
+            >Custom Code</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#Lor3">Wordpress</a>
+          <a class="nav-link" data-bs-toggle="tab" href="#Wordpress" (click)="itemsToShow.set(3)"
+            >Wordpress</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#Lor4">JS prac</a>
+          <a class="nav-link" data-bs-toggle="tab" href="#JSprac" (click)="itemsToShow.set(3)"
+            >JS prac</a
+          >
         </li>
       </ul>
     </div>
@@ -20,49 +28,55 @@
 
   <div class="tab-content text-info">
     <!-- Lor1 -->
-    <div class="tab-pane fade show active" id="Lor1" role="tabpanel">
+    <div class="tab-pane fade show active" id="All" role="tabpanel">
       <div class="row g-5">
-        @for (p of _projects(); track p.id) {
+        @for (p of AllProjects(); track p.id) {
         <div class="col-4">
           <div class="card">
-            <img src="{{p.imag}}" class="card-img-top" alt="..." />
+            <img src="{{ p.image }}" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">{{ p.title }}</h5>
-              <!-- <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the
-                card’s content.
-              </p> -->
-              <a routerLink="ProjectDetails/{{ p.id }}" class="btn btn-primary">Go somewhere</a>
+
+              <a routerLink="ProjectDetails/{{ p.id }}" class="btn btn-primary">Show Details</a>
             </div>
           </div>
         </div>
         }
       </div>
+      @if (itemsToShow() < AlldataLength()) {
+      <div class="text-center mt-4">
+        <button class="show-btn" (click)="itemsToShow.set(itemsToShow() + 3)">Load More</button>
+      </div>
+      }
     </div>
 
     <!-- Lor2 -->
-    <div class="tab-pane fade" id="Lor2" role="tabpanel">
+    <div class="tab-pane fade" id="CustomCode" role="tabpanel">
       <div class="row g-3">
         @for (p of _customcode(); track p.id) {
         <div class="col-4">
           <div class="card">
-            <img src="{{p.imag}}" class="card-img-top" alt="..." />
+            <img src="{{ p.image }}" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">{{ p.title }}</h5>
-              <!-- <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the
-                card’s content.
-              </p> -->
-              <a routerLink="ProjectDetails/{{ p.id }}" class="btn btn-primary">Go somewhere</a>
+
+              <a routerLink="ProjectDetails/{{ p.id }}" class="btn btn-primary">Show Details</a>
             </div>
           </div>
         </div>
         }
       </div>
+      @if (itemsToShow() < customCodeLength()) {
+      <div class="text-center mt-4">
+        <button class="btn btn-outline-primary" (click)="itemsToShow.set(itemsToShow() + 2)">
+          Load More
+        </button>
+      </div>
+      }
     </div>
 
     <!-- Lor3 -->
-    <div class="tab-pane fade" id="Lor3" role="tabpanel">
+    <div class="tab-pane fade" id="Wordpress" role="tabpanel">
       <div class="row g-3">
         <div class="col-12">
           <div class="card">
@@ -75,7 +89,7 @@
     </div>
 
     <!-- Lor4 -->
-    <div class="tab-pane fade" id="Lor4" role="tabpanel">
+    <div class="tab-pane fade" id="JSprac" role="tabpanel">
       <div class="row g-3">
         <div class="col-12">
           <div class="card">
