@@ -1,4 +1,13 @@
-import { Component, computed, inject, OnInit, signal, Signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  ElementRef,
+  inject,
+  OnInit,
+  signal,
+  Signal,
+  ViewChild,
+} from '@angular/core';
 import { ProjectServices } from '../../../Services/project-services';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -16,6 +25,8 @@ import { IProjects } from './iprojects';
   styleUrl: './proj-home.css',
 })
 export class ProjHome {
+  @ViewChild('allTab') allTab!: ElementRef<HTMLDivElement>; // <--- هنا
+
   private proj_service = inject(ProjectServices);
 
   itemsToShow = signal(3);
@@ -40,5 +51,27 @@ export class ProjHome {
   customCodeLength = computed(
     () => this._projects().filter((p) => p.type.toLowerCase() === 'custom code').length
   );
-All: any;
+
+  // show more& less func
+  loadMore() {
+    this.itemsToShow.set(this.itemsToShow() + 3);
+
+    setTimeout(() => {
+      this.allTab.nativeElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    },50);
+  }
+
+  seeLess() {
+    this.itemsToShow.set(3);
+
+    setTimeout(() => {
+      this.allTab.nativeElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    },50);
+  }
 }
