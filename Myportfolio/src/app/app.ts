@@ -6,7 +6,7 @@ import { ProjHome } from "./componnent/home_parts/proj-home/proj-home";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, RouterModule, AboutMe, ProjHome],
+  imports: [Header, RouterModule,],
   templateUrl: './app.html',
   styleUrls: ['./app.css'],
 })

@@ -1,7 +1,30 @@
-@if (project()) {
-<div class="projectDetails-row">
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div
+        style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+        class="swiper mySwiper2"
+      >
+        <div class="swiper-wrapper">
+          @if (project()) { @for (i of project()?.projimg; track i) {
+          <div class="swiper-slide">
+            <img [src]="i" />
+          </div>
+          } }
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
 
+      <div thumbsSlider="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          @if (project()) { @for (i of project()?.projimg; track i) {
+          <div class="swiper-slide">
+            <img [src]="i" />
+          </div>
+          } }
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-} @else {
-<p>Loading project details...</p>
-}

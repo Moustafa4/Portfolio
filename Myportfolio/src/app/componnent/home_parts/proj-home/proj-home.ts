@@ -61,7 +61,7 @@ export class ProjHome {
         behavior: 'smooth',
         block: 'center',
       });
-    },50);
+    });
   }
 
   seeLess() {
@@ -72,6 +72,6 @@ export class ProjHome {
         behavior: 'smooth',
         block: 'start',
       });
-    },50);
+    });
   }
 }

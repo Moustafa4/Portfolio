@@ -1,8 +1,8 @@
 export interface IProjects {
-imag: any;
+  projimg: string[];
   id: number;
   type: string;
-  image:string;
+  image: string;
   title: string;
   shortDescription: string;
   role: string;
