@@ -1,5 +1,7 @@
 export interface IProjects {
   projimg: string[];
+  Duration: string;
+  Client:string;
   id: number;
   type: string;
   image: string;

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container con-slider">
   <div class="row">
     <div class="col-12">
       <div
@@ -27,4 +27,97 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="container con-title">
+  <div class="row">
+    <div class="col-6 left">
+      @if (project()) {
+      <h1>
+        {{ project()?.title }}
+      </h1>
+      }
+    </div>
+    <div class="col-6 right">
+      @if (project()) {
+      <div>
+        <a href="{{ project()?.liveUrl }}">View Live Demo </a>
+      </div>
+
+      <div><a href="{{ project()?.liveUrl }}">View on GitHub </a></div>
+      }
+    </div>
+  </div>
+</div>
+<div class="container con-info">
+  <div class="row g-5">
+    <div class="col-9 left">
+      <h3>Project Overview</h3>
+      @if (project()) {
+      <p>
+        {{ project()?.shortDescription }}
+      </p>
+      }
+    </div>
+    <div class="col-3 right">
+      <h3>Project Info</h3>
+      @if (project()) {
+      <div>
+        <ul>
+          <li>Type: {{ project()?.type }}</li>
+          <li>Role: {{ project()?.role }}</li>
+          <li>Duration: {{ project()?.Duration }}</li>
+          <li>Client: {{ project()?.Client }}</li>
+        </ul>
+        <a href=""></a>
+      </div>
+      }
+    </div>
+  </div>
+</div>
+<div class="container con-Tech">
+  <div class="row">
+    <div class="col-12">
+      <h3>Tech Stack</h3>
+      <div class="Tech">
+        @if(project()){ @for(t of project()?.techStack; track t){
+        <h5>{{ t }}</h5>
+        } }
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    @if (similarProjects()) { @for (i of similarProjectsslice(); track i.id) {
+    <div class="col-4">
+      <div class="card" style="width: 18rem">
+        <img src="{{ i.image }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ i.title }}</h5>
+
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    } }
+  </div>
+  @if (itemstoshow() < similarProjectslen()) {
+  <div class="text-center mt-4">
+    <button class="show-btn"
+            (click)="loadmore()"
+            >
+      Load More
+    </button>
+  </div>
+} @else {
+  <div class="text-center mt-4">
+    <button class="show-btn"
+            (click)="loadless()"
+  >
+      See less
+    </button>
+  </div>
+}
+
 </div>

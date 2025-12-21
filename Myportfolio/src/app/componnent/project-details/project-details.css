@@ -1,9 +1,15 @@
 /* السلايدر الرئيسي */
+.con-slider {
+  border: 1px solid #fd6e0080;
+  padding: 15px;
+  border-radius: 50px;
+}
 .mySwiper2 {
   width: 100%;
   height: 500px;
   margin-bottom: 20px;
   position: relative;
+  border-radius: 33px;
 }
 
 .mySwiper2 .swiper-slide {
@@ -13,18 +19,18 @@
 }
 
 .mySwiper2 .swiper-slide img {
-  width: 100%;
+  width:77%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+  object-fit: scale-down;
+  border-radius: 30px;
 }
 
 /* الأزرار */
 .mySwiper2 .swiper-button-next,
 .mySwiper2 .swiper-button-prev {
-  color: #fff;
-  width: 45px;
-  height: 45px;
+  color: #fd6f00;
+  width: 40px;
+  height: 40px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
   top: 50%;
@@ -35,23 +41,20 @@
 .mySwiper2 .swiper-button-prev:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
-
 /* السلايدر الصغير (thumbnails) */
 .mySwiper {
-  height: 100px;
+  height: 150px;
   box-sizing: border-box;
 }
 
 .mySwiper .swiper-slide {
-  width: 100px;
-  height: 100px;
+  width: 615px !important;
+  height: 100% !important;
   opacity: 0.6;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 50px;
   overflow: hidden;
   transition: opacity 0.3s, transform 0.3s;
-  /* padding بدل المسافة لو حبيت */
-  /* margin-right: 10px; */
 }
 
 .mySwiper .swiper-slide-thumb-active {
@@ -65,6 +68,96 @@
   object-fit: cover;
 }
 
+/* جزء العنوان و الداتا */
+.con-title,
+.con-Tech {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.678);
+}
+.con-title .left h1 {
+  color: #fd6e00c7;
+  font-family: 'lato-b';
+  letter-spacing: 2px;
+}
+.con-title .right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.con-title .right div {
+  width: 40%;
+  text-align: center;
+}
+.con-title .right div a {
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.801);
+  font-family: 'lato-b';
+  font-size: 21px;
+  letter-spacing: 0.5px;
+  padding: 8px;
+  box-shadow: 4px 0px 9px 0px rgba(253, 111, 0, 0.212);
+  border-radius: 50px;
+}
+.con-title .right div:hover a {
+  color: white;
+  background: #fd6f00;
+  border-radius: 50px;
+}
+/* info */
+.con-info {
+  border-bottom: 1px solid rgba(220, 220, 220, 0.678);
+}
+.con-info .left {
+  border-right: 1px solid white;
+}
+.con-info .left h3,
+.con-info .right h3,
+.con-Tech h3,
+.con-Tech .Tech h5 {
+  color: rgba(255, 255, 255, 0.815);
+  letter-spacing: 1.7px;
+}
+.con-info .left p {
+  color: #707070;
+  width: 50%;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+.con-info .right div {
+  border: 1px solid rgba(236, 236, 236, 0.363);
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.068);
+  box-shadow: inset 0px 0px 20px 3px #fd6f0030;
+}
+.con-info .right div ul li {
+  color: #bdbdbd;
+  font-family: 'lato-p';
+  font-size: 20px;
+}
+.con-info .right div ul li:not(:last-child) {
+  margin-top: 5px;
+  padding: 5px;
+}
+/* tech */
+.con-Tech .Tech {
+  border: 1px solid red;
+  width: 50%;
+
+  /* margin: 0px auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.con-Tech .Tech h5 {
+  margin: 0;
+  border: 1px solid white;
+  /* padding: 10px; */
+}
 /* Responsive */
 @media (max-width: 768px) {
   .mySwiper2 {

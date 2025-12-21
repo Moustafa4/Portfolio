@@ -25,7 +25,7 @@ import { IProjects } from './iprojects';
   styleUrl: './proj-home.css',
 })
 export class ProjHome {
-  @ViewChild('allTab') allTab!: ElementRef<HTMLDivElement>; // <--- هنا
+  @ViewChild('allTab') allTab!: ElementRef<HTMLDivElement>; 
 
   private proj_service = inject(ProjectServices);
 
@@ -41,6 +41,7 @@ export class ProjHome {
   AllProjects = computed(() => this._projects().slice(0, this.itemsToShow()));
   // all data len
   AlldataLength = computed(() => this._projects().length);
+
   _customcode = computed(() =>
     this._projects()
       .filter((p) => p.type.toLowerCase() === 'custom code')
