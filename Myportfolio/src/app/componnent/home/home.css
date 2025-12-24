@@ -191,6 +191,71 @@ h5,
 /* end */
 
 @media (max-width: 767px) {
+  @keyframes showborder2 {
+    to {
+      border-image: linear-gradient(45deg, #984300 0%, #fd6f00 46%, #ca5900 100%) 1;
+    }
+  }
+  @keyframes blinking2 {
+    50% {
+      border-image: linear-gradient(transparent, transparent) 1;
+    }
+  }
+
+  @keyframes showborder {
+    to {
+      border-color: #707070;
+    }
+  }
+  @keyframes blinking {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @keyframes hidingbordre {
+    to {
+      border-color: transparent;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes slider {
+    100% {
+      transform: translateY(calc(-2 * 6.5em));
+    }
+  }
+  @keyframes typingCycle {
+    0% {
+      width: 0;
+    }
+    35% {
+      width: 100%;
+    } /* نهاية الكتابة */
+    65% {
+      width: 100%;
+    } /* نهاية الوقفة */
+    100% {
+      width: 0;
+    } /* نهاية المسح */
+  }
+  /* icons hover */
+  @keyframes hoverEffect {
+    0% {
+      transform: rotate(0deg);
+
+      color: #bababa;
+    }
+    100% {
+      transform: rotate(360deg);
+      color: #fd6f00;
+    }
+  }
   .container-typing2 ol {
     padding: 0;
     list-style: none;
