@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IProjects } from '../componnent/home_parts/proj-home/iprojects';
-import { map, Observable } from 'rxjs';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -17,9 +17,11 @@ export class ProjectServices {
       .get<{ projects: IProjects[] }>(this.dp_url)
       .pipe(map((res) => res.projects ?? []));
   }
-  getProjectById(id: number): Observable<IProjects | null> {
-    return this._HttpClient
-      .get<IProjects[]>(this.dp_url)
-      .pipe(map((projects) => projects.find((p) => p.id === id) || null));
+
+  getProjectById(id: number) {
+    return this._HttpClient.get<{ projects: IProjects[] }>(this.dp_url).pipe(
+      map((res) => res.projects ?? []),
+      map((projects) => projects.find((p) => p.id === id) || null)
+    );
   }
 }
