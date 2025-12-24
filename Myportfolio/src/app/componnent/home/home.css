@@ -191,6 +191,17 @@ h5,
 /* end */
 
 @media (max-width: 767px) {
+  .container-typing2 ol {
+    padding: 0;
+    list-style: none;
+    --height: 5.5em;
+    height: var(--height);
+    line-height: var(--height);
+    overflow: initial;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
   .container {
     margin: 0;
   }
