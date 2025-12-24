@@ -242,7 +242,7 @@ h5,
   }
   @keyframes slider {
     100% {
-      transform: translateY(-100px);
+      transform: translateY(-50%);
     }
   }
   .container {
