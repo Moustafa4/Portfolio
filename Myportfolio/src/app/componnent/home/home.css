@@ -191,6 +191,11 @@ h5,
 /* end */
 
 @media (max-width: 767px) {
+  @keyframes slider {
+    100% {
+      transform: translateY(-100);
+    }
+  }
   .container {
     margin: 0;
   }
