@@ -1,6 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, effect, computed, signal } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { map, switchMap } from 'rxjs';
+import { map, of, switchMap } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ProjectServices } from '../../Services/project-services';
 import { IProjects } from '../home_parts/proj-home/iprojects';
@@ -30,30 +30,32 @@ export class ProjectDetails {
   project = toSignal<IProjects | null>(
     this.route.paramMap.pipe(
       map((params) => Number(params.get('id'))),
-      switchMap((id) => this.proService.getuserbyid(id))
+      switchMap((id) => this.proService.getProjectById(id))
     )
   );
   similarProjects = toSignal<IProjects[]>(
     this.route.paramMap.pipe(
       map((params) => Number(params.get('id'))),
       switchMap((id) =>
-        this.proService
-          .getuserbyid(id)
-          .pipe(
-            switchMap((currentProject) =>
-              this.proService
-                .getProjectByType()
-                .pipe(
-                  map((projects) =>
-                    projects.filter(
-                      (p) =>
-                        p.id !== currentProject.id &&
-                        p.type.toLowerCase() === currentProject.type.toLowerCase()
-                    )
+        this.proService.getProjectById(id).pipe(
+          switchMap((currentProject) => {
+            if (!currentProject) {
+              // لو المشروع مش موجود رجع مصفوفة فارغة
+              return of([]);
+            }
+            return this.proService
+              .getProjectByType()
+              .pipe(
+                map((projects) =>
+                  projects.filter(
+                    (p) =>
+                      p.id !== currentProject.id &&
+                      p.type.toLowerCase() === currentProject.type.toLowerCase()
                   )
                 )
-            )
-          )
+              );
+          })
+        )
       )
     )
   );

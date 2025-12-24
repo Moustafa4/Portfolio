@@ -39,36 +39,52 @@ export class ProjHome {
   _projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
 
   // all data len
-  AllProjects = computed(() => this._projects().slice(0, this.itemsToShow()));
+  AllProjects = computed(() => {
+    const projects = this._projects();
+    return Array.isArray(projects) ? projects.slice(0, this.itemsToShow()) : [];
+  });
+
   AlldataLength = computed(() => this._projects().length);
 
   // Custom len
-  _customcode = computed(() =>
-    this._projects()
-      .filter((p) => p.type.toLowerCase() === 'custom code')
-      .slice(0, this.itemsToShow())
-  );
-  customCodeLength = computed(
-    () => this._projects().filter((p) => p.type.toLowerCase() === 'custom code').length
-  );
+  _customcode = computed(() => {
+    const projects = this._projects();
+    return Array.isArray(projects)
+      ? projects.filter((p) => p.type.toLowerCase() === 'custom code').slice(0, this.itemsToShow())
+      : [];
+  });
+  customCodeLength = computed(() => {
+    const projects = this._projects();
+    return Array.isArray(projects)
+      ? projects.filter((p) => p.type.toLowerCase() === 'custom code').length
+      : 0;
+  });
   // wordp len
-  _wordpress = computed(() =>
-    this._projects()
-      .filter((p) => p.type.toLowerCase() === 'wordpress')
-      .slice(0, this.itemsToShow())
-  );
-  wordpressLength = computed(
-    () => this._projects().filter((p) => p.type.toLowerCase() === 'wordpress').length
-  );
+  _wordpress = computed(() => {
+    const projects = this._projects();
+    return Array.isArray(projects)
+      ? projects.filter((p) => p.type.toLowerCase() === 'wordpress').slice(0, this.itemsToShow())
+      : [];
+  });
+  wordpressLength = computed(() => {
+    const projects = this._projects();
+    return Array.isArray(projects)
+      ? projects.filter((p) => p.type.toLowerCase() === 'wordpress').length
+      : 0;
+  });
   // js len
-  _js = computed(() =>
-    this._projects()
-      .filter((p) => p.type.toLocaleLowerCase() === 'js')
-      .slice(0, this.itemsToShow())
-  );
-  jsLength = computed(
-    () => this._projects().filter((p) => p.type.toLocaleLowerCase() == 'js').length
-  );
+  _js = computed(() => {
+    const projects = this._projects();
+    return Array.isArray(projects)
+      ? projects.filter((p) => p.type.toLowerCase() === 'js').slice(0, this.itemsToShow())
+      : [];
+  });
+  jsLength = computed(() => {
+    const projects = this._projects();
+    return Array.isArray(projects)
+      ? projects.filter((p) => p.type.toLowerCase() === 'js').length
+      : 0;
+  });
   // show more& less func
   loadMore() {
     this.itemsToShow.set(this.itemsToShow() + 3);
