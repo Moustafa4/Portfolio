@@ -285,7 +285,17 @@ h5,
   .container-typing2 ol li {
     animation: slider calc(2 * 2 * 6s) steps(2) infinite;
   }
-
+  .container-typing2 ol {
+    padding: 0;
+    list-style: none;
+    --height: 5.5em;
+    height: var(--height);
+    line-height: var(--height);
+    overflow: visible;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
   .container-typing2 ol li span {
     white-space: nowrap;
     display: inline-block;
