@@ -225,11 +225,7 @@ h5,
       width: 100%;
     }
   }
-  @keyframes slider {
-    100% {
-      transform: translateY(calc(-2 * 6.5em));
-    }
-  }
+
   @keyframes typingCycle {
     0% {
       width: 0;
