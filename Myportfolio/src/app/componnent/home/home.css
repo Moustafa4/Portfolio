@@ -227,7 +227,7 @@ h5,
   }
   @keyframes slider {
     100% {
-      transform: translateY(calc(-2 * 6.5em));
+      transform: translateY(calc(-100حء));
     }
   }
   @keyframes typingCycle {
