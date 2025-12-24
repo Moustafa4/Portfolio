@@ -87,7 +87,9 @@
   width: 200px;
   min-height: 200px;
   text-align: center;
-  border: 1px solid red;
+  padding-top: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 1px 13px 1px #ff852957;
 }
 .skills_row .col-lg-12 {
   width: 100%;
@@ -118,7 +120,6 @@
   width: 130px;
   height: 100%;
   border-radius: 50%;
-  /* border: 1px solid red; */
 }
 .skills_row .skills_con div span:nth-child(3) {
   position: absolute;
@@ -126,7 +127,6 @@
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  /* border: 1px solid red; */
   outline: 10px solid hsla(0, 0%, 85%, 20%);
 }
 .skills_row .skills_con div svg {
@@ -160,7 +160,7 @@ circle {
     position: absolute;
     /* width: 365.64px; */
     height: 432.6px;
-    width: 82%;
+    width: 77%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -35.2%);
@@ -177,12 +177,12 @@ circle {
   .pro_img {
     position: absolute;
     height: 564.88px;
-    width: 394.7px;
+    width: 368.7px;
 
     margin: 0px auto;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50.5%);
+    transform: translate(-50%, -50.4%);
     bottom: 0;
   }
   .p-large {
@@ -206,10 +206,9 @@ circle {
     gap: 15px;
   }
   .skills_row .skills_con {
-    width: 160px;
+    width: 154px;
     min-height: 200px;
     text-align: center;
-    border: 1px solid red;
   }
   .skills_row .skills_con p:nth-of-type(1) {
     margin-bottom: 8px;
@@ -261,7 +260,6 @@ circle {
   .container {
     margin-top: 100px;
     margin-bottom: 100px;
-    border: 1px solid red;
   }
   .about-img {
     display: flex;
@@ -327,7 +325,6 @@ circle {
     width: 160px;
     min-height: 200px;
     text-align: center;
-    border: 1px solid red;
   }
   .skills_row .skills_con p:nth-of-type(1) {
     margin-bottom: 8px;
@@ -349,7 +346,6 @@ circle {
     width: 130px;
     height: 100%;
     border-radius: 50%;
-    /* border: 1px solid red; */
   }
   .skills_row .skills_con div span:nth-child(3) {
     position: absolute;
@@ -357,7 +353,6 @@ circle {
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    /* border: 1px solid red; */
     outline: 10px solid hsla(0, 0%, 85%, 20%);
   }
   .skills_row .skills_con div svg {
@@ -386,13 +381,11 @@ circle {
     flex-flow: row;
     gap: 78px;
     align-self: center;
-    border: 1px SOLID RED;
     min-height: 690px;
   }
   .about-img .left {
     position: relative;
     height: 670px;
-    /* border: 1px solid red; */
   }
   .right {
     align-self: center;
@@ -440,13 +433,12 @@ circle {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    gap: 15px;
+    /* gap: 15px; */
   }
   .skills_row .skills_con {
-    width: 200px;
+    width: 137px;
     min-height: 200px;
     text-align: center;
-    border: 1px solid red;
   }
   .skills_row .skills_con p:nth-of-type(1) {
     margin-bottom: 8px;
@@ -470,7 +462,6 @@ circle {
     width: 130px;
     height: 100%;
     border-radius: 50%;
-    /* border: 1px solid red; */
   }
   .skills_row .skills_con div span:nth-child(3) {
     position: absolute;
@@ -478,7 +469,6 @@ circle {
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    /* border: 1px solid red; */
     outline: 10px solid hsla(0, 0%, 85%, 20%);
   }
   .skills_row .skills_con div svg {
@@ -503,7 +493,6 @@ circle {
     flex-flow: row;
     gap: 90px;
     align-self: flex-start;
-    border: 1px solid red;
   }
 
   .right {

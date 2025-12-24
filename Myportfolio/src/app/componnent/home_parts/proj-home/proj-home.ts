@@ -25,7 +25,7 @@ import { IProjects } from './iprojects';
   styleUrl: './proj-home.css',
 })
 export class ProjHome {
-  @ViewChild('allTab') allTab!: ElementRef<HTMLDivElement>; 
+  @ViewChild('allTab') allTab!: ElementRef<HTMLDivElement>;
 
   private proj_service = inject(ProjectServices);
 
@@ -38,21 +38,37 @@ export class ProjHome {
   // to transform from data from obse to signal
   _projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
 
-  AllProjects = computed(() => this._projects().slice(0, this.itemsToShow()));
   // all data len
+  AllProjects = computed(() => this._projects().slice(0, this.itemsToShow()));
   AlldataLength = computed(() => this._projects().length);
 
+  // Custom len
   _customcode = computed(() =>
     this._projects()
       .filter((p) => p.type.toLowerCase() === 'custom code')
       .slice(0, this.itemsToShow())
   );
-
-  // Custom len
   customCodeLength = computed(
     () => this._projects().filter((p) => p.type.toLowerCase() === 'custom code').length
   );
-
+  // wordp len
+  _wordpress = computed(() =>
+    this._projects()
+      .filter((p) => p.type.toLowerCase() === 'wordpress')
+      .slice(0, this.itemsToShow())
+  );
+  wordpressLength = computed(
+    () => this._projects().filter((p) => p.type.toLowerCase() === 'wordpress').length
+  );
+  // js len
+  _js = computed(() =>
+    this._projects()
+      .filter((p) => p.type.toLocaleLowerCase() === 'js')
+      .slice(0, this.itemsToShow())
+  );
+  jsLength = computed(
+    () => this._projects().filter((p) => p.type.toLocaleLowerCase() == 'js').length
+  );
   // show more& less func
   loadMore() {
     this.itemsToShow.set(this.itemsToShow() + 3);

@@ -13,15 +13,14 @@ export class AboutMe {
     let section = document.querySelector('.skills_row') as HTMLElement;
     let startedanimation = false;
 
-window.addEventListener('scroll', () => {
-  const rect = section.getBoundingClientRect();
-  if (!startedanimation && rect.top <= window.innerHeight - 100) {
-    startedanimation = true;
-    divcon.forEach((div) => started(div));
-    console.log("Animation started");
-  }
-});
-
+    window.addEventListener('scroll', () => {
+      const rect = section.getBoundingClientRect();
+      if (!startedanimation && rect.top <= window.innerHeight - 100) {
+        startedanimation = true;
+        divcon.forEach((div) => started(div));
+        console.log('Animation started');
+      }
+    });
 
     function started(el: any) {
       let goal = +el.dataset.goal;

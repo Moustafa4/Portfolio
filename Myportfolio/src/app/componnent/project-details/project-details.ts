@@ -1,14 +1,5 @@
-import {
-  Component,
-  CUSTOM_ELEMENTS_SCHEMA,
-  inject,
-  effect,
-  computed,
-  signal,
-  ViewChild,
-  ElementRef,
-} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, effect, computed, signal } from '@angular/core';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { map, switchMap } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ProjectServices } from '../../Services/project-services';
@@ -22,7 +13,7 @@ register();
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './project-details.html',
   styleUrl: './project-details.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -93,14 +84,43 @@ export class ProjectDetails {
   //     )
   //   )
   // );
-  loadmore() {
-    this.itemstoshow.set(this.itemstoshow() + 1);
+  loadMore() {
+    const width = window.innerWidth;
+    if (width <= 600) {
+      this.itemstoshow.set(this.itemstoshow() + 2);
+    } else if (width <= 1024) {
+      this.itemstoshow.set(this.itemstoshow() + 3);
+    } else {
+      this.itemstoshow.set(this.itemstoshow() + 3);
+    }
   }
-  loadless() {
-    this.itemstoshow.set(1);
+  seeLess() {
+    if (window.innerWidth <= 768) {
+      this.itemstoshow.set(1);
+    } else if (window.innerWidth >= 769 && window.innerWidth <= 991) {
+      this.itemstoshow.set(2);
+    } else {
+      this.itemstoshow.set(3);
+    }
+  }
+  updateItemsToShow() {
+    const width = window.innerWidth;
+
+    if (width <= 600) {
+      this.itemstoshow.set(1);
+    } else if (width <= 1024) {
+      this.itemstoshow.set(2);
+    } else {
+      this.itemstoshow.set(3);
+    }
   }
 
   constructor() {
+    this.updateItemsToShow();
+
+    window.addEventListener('resize', () => {
+      this.updateItemsToShow();
+    });
     effect(() => {
       if (this.project() && !this.swiperInited) {
         this.swiperInited = true;
@@ -108,8 +128,8 @@ export class ProjectDetails {
         queueMicrotask(() => {
           const thumbsSwiper = new Swiper('.mySwiper', {
             loop: true,
-            spaceBetween: 30,
-            slidesPerView: 2,
+            spaceBetween: 20,
+            slidesPerView: 4,
             freeMode: true,
             watchSlidesProgress: true,
           });
@@ -121,6 +141,7 @@ export class ProjectDetails {
             navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
+              addIcons: true,
             },
             pagination: {
               el: '.swiper-pagination',
@@ -134,12 +155,12 @@ export class ProjectDetails {
               scale: 300,
               // stretch:1,
             },
-            autoplay: {
-              delay: 5000,
-              pauseOnMouseEnter: true,
-              disableOnInteraction: true,
-              waitForTransition: true,
-            },
+            // autoplay: {
+            //   delay: 5000,
+            //   pauseOnMouseEnter: true,
+            //   disableOnInteraction: true,
+            //   waitForTransition: true,
+            // },
             thumbs: {
               swiper: thumbsSwiper,
             },

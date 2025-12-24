@@ -24,3 +24,10 @@ body {
   font-style: normal;
   font-display: swap;
 }
+.swiper-button-next .swiper-navigation-icon,
+.swiper-button-prev .swiper-navigation-icon {
+  height: 30px;
+}
+html{
+  border: 1px solid yellow;
+}

@@ -1,73 +1,3 @@
-/* السلايدر الرئيسي */
-.con-slider {
-  border: 1px solid #fd6e0080;
-  padding: 15px;
-  border-radius: 50px;
-}
-.mySwiper2 {
-  width: 100%;
-  height: 500px;
-  margin-bottom: 20px;
-  position: relative;
-  border-radius: 33px;
-}
-
-.mySwiper2 .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mySwiper2 .swiper-slide img {
-  width:77%;
-  height: 100%;
-  object-fit: scale-down;
-  border-radius: 30px;
-}
-
-/* الأزرار */
-.mySwiper2 .swiper-button-next,
-.mySwiper2 .swiper-button-prev {
-  color: #fd6f00;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.mySwiper2 .swiper-button-next:hover,
-.mySwiper2 .swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-/* السلايدر الصغير (thumbnails) */
-.mySwiper {
-  height: 150px;
-  box-sizing: border-box;
-}
-
-.mySwiper .swiper-slide {
-  width: 615px !important;
-  height: 100% !important;
-  opacity: 0.6;
-  cursor: pointer;
-  border-radius: 50px;
-  overflow: hidden;
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-.mySwiper .swiper-slide-thumb-active {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.mySwiper .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* جزء العنوان و الداتا */
 .con-title,
 .con-Tech {
@@ -102,7 +32,8 @@
   box-shadow: 4px 0px 9px 0px rgba(253, 111, 0, 0.212);
   border-radius: 50px;
 }
-.con-title .right div:hover a {
+.con-title .right div a:hover,
+.con-contact a:hover {
   color: white;
   background: #fd6f00;
   border-radius: 50px;
@@ -117,6 +48,8 @@
 .con-info .left h3,
 .con-info .right h3,
 .con-Tech h3,
+.con-contact h4,
+.con-relat h3,
 .con-Tech .Tech h5 {
   color: rgba(255, 255, 255, 0.815);
   letter-spacing: 1.7px;
@@ -144,26 +77,112 @@
 }
 /* tech */
 .con-Tech .Tech {
-  border: 1px solid red;
   width: 50%;
-
+  padding: 20px;
   /* margin: 0px auto; */
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 90px;
 }
 .con-Tech .Tech h5 {
   margin: 0;
   border: 1px solid white;
-  /* padding: 10px; */
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.146);
+  box-shadow: 0px 0px 20px 3px #fd6f0030;
 }
+/* card */
+.card {
+  background: rgba(255, 255, 255, 0.048);
+  border-radius: 25px;
+  box-shadow: 2px 3px 13px 1px #ff852957;
+  overflow: hidden;
+  border-radius: 26px;
+  width: 400px;
+}
+.card img {
+  width: 100%;
+  height: 22rem;
+  border-radius: 26px;
+}
+.card:hover {
+  transform: scale(1.05);
+  border-radius: 26px;
+}
+.card-body {
+  text-align: center;
+}
+.card-body h5 {
+  color: #fd6f00;
+  padding: 10px;
+}
+.card-body a {
+  background: transparent;
+  border: 1px solid #fd6f00;
+}
+.card-body a:hover {
+  background: #fd6f00;
+}
+/* loadmore btn */
+.show-btn {
+  background: transparent;
+  color: white;
+  font-family: 'lato-b';
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  width: 150px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: inset 2px 3px 13px 1px #ff852957;
+}
+.show-btn:hover {
+  transform: scale(1.1);
+}
+
+.con-contact {
+  margin-top: 4rem;
+  padding: 3rem;
+  text-align: center;
+}
+.con-contact a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.8rem;
+  width: 15rem;
+  margin-top: 2rem;
+  font-family: 'lato-bl';
+  letter-spacing: 0.15rem;
+  color: white;
+  box-shadow: 4px 0px 9px 0px rgba(253, 111, 0, 0.212);
+  border-radius: 2rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-  .mySwiper2 {
-    height: 300px;
+  .con-slider {
+    height: 437px;
+    border: 1px solid #fd6e0080;
+    padding: 15px;
+    border-radius: 50px;
+    width: 90%;
   }
-
+  .mySwiper2 {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 33px;
+  }
+  .mySwiper2 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+  }
   .mySwiper {
     height: 80px;
   }
@@ -172,19 +191,407 @@
     width: 70px;
     height: 70px;
   }
-}
 
-@media (max-width: 480px) {
-  .mySwiper2 {
-    height: 250px;
+  /* الأزرار */
+  .mySwiper2 .swiper-button-next,
+  .mySwiper2 .swiper-button-prev {
+    color: #fd6f00;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
   }
-
+  .mySwiper2 .swiper-button-next:hover,
+  .mySwiper2 .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  /* السلايدر الصغير (thumbnails) */
   .mySwiper {
-    height: 60px;
+    height: 150px;
+    box-sizing: border-box;
   }
 
   .mySwiper .swiper-slide {
-    width: 50px;
-    height: 50px;
+    opacity: 0.6;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+    border-radius: 10px;
+  }
+
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  .mySwiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .con-title .left {
+    align-self: center;
+    text-align: center;
+  }
+
+  .con-title .right {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-flow: column;
+  }
+  .con-title .right div {
+    width: 100%;
+    text-align: center;
+  }
+  .con-title .right div a {
+    font-size: 15px;
+  }
+  /* info */
+  .con-info {
+    width: 90%;
+    border-bottom: 1px solid rgba(220, 220, 220, 0.678);
+  }
+  .con-info .left {
+    padding: 0.3rem;
+  }
+  .con-info .left p {
+    width: 100%;
+    padding-right: 5px;
+  }
+  .con-info .right div {
+    padding: 0px;
+  }
+  .con-info .right div ul li {
+    font-size: 14px;
+  }
+
+  .con-relat {
+    width: 93%;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.048);
+    border-radius: 25px;
+    box-shadow: 2px 3px 13px 1px #ff852957;
+    overflow: hidden;
+    border-radius: 26px;
+    width: 70%;
+    height: fit-content;
+    margin: 0px auto;
+  }
+
+  .card img {
+    width: 100%;
+    height: 15rem;
+    border-radius: 26px;
+  }
+  .con-Tech .Tech {
+    width: 100%;
+    padding: 10px 0px;
+    /* margin: 0px auto; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+  .con-Tech .Tech h5 {
+    margin: 0;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.146);
+    box-shadow: 0px 0px 20px 3px #fd6f0030;
+  }
+  .con-contact {
+    width: 95%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .con-slider {
+    height: 437px;
+    border: 1px solid #fd6e0080;
+    padding: 15px;
+    border-radius: 50px;
+    width: 75%;
+  }
+  .mySwiper2 {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 33px;
+  }
+  .mySwiper2 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+  .mySwiper .swiper-slide {
+    width: 70px;
+    height: 70px;
+  }
+  /* الأزرار */
+  .mySwiper2 .swiper-button-next,
+  .mySwiper2 .swiper-button-prev {
+    color: #fd6f00;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .mySwiper2 .swiper-button-next:hover,
+  .mySwiper2 .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  /* السلايدر الصغير (thumbnails) */
+  .mySwiper {
+    height: 150px;
+    box-sizing: border-box;
+  }
+  .mySwiper .swiper-slide {
+    opacity: 0.6;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+    border-radius: 10px;
+  }
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  .mySwiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .con-Tech .Tech {
+    width: 50%;
+    padding: 10px 0px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .con-Tech .Tech h5 {
+    margin: 0;
+    border: 1px solid white;
+    padding: 0.6rem;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.146);
+    box-shadow: 0px 0px 20px 3px #fd6f0030;
+  }
+  .con-title .right {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-flow: column;
+  }
+  .con-title .right div {
+    width: 100%;
+    text-align: center;
+  }
+  .con-title .right div a {
+    font-size: 1.2rem;
+  }
+  .con-title .left {
+    align-self: center;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.048);
+    border-radius: 25px;
+    box-shadow: 2px 3px 13px 1px #ff852957;
+    overflow: hidden;
+    border-radius: 26px;
+    width: 100%;
+    height: fit-content;
+    margin: 0px auto;
+  }
+  .card img {
+    width: 100%;
+    border-radius: 26px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* السلايدر الرئيسي */
+  .con-slider {
+    height: 646px;
+    border: 1px solid #fd6e0080;
+    padding: 15px;
+    border-radius: 50px;
+    width: 65%;
+  }
+  .mySwiper2 {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 33px;
+  }
+
+  .mySwiper2 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+
+  /* الأزرار */
+  .mySwiper2 .swiper-button-next,
+  .mySwiper2 .swiper-button-prev {
+    color: #fd6f00;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .mySwiper2 .swiper-button-next:hover,
+  .mySwiper2 .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  /* السلايدر الصغير (thumbnails) */
+  .mySwiper {
+    height: 80px;
+    box-sizing: border-box;
+  }
+
+  .mySwiper .swiper-slide {
+    opacity: 0.6;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+    border-radius: 10px;
+  }
+
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  .mySwiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .con-Tech .Tech {
+    width: 50%;
+    padding: 10px 0px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .con-Tech .Tech h5 {
+    margin: 0;
+    border: 1px solid white;
+    padding: 0.6rem;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.146);
+    box-shadow: 0px 0px 20px 3px #fd6f0030;
+  }
+
+  .con-title .right div a {
+    font-size: 1.2rem;
+  }
+  .con-title .left {
+    align-self: center;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.048);
+    border-radius: 25px;
+    box-shadow: 2px 3px 13px 1px #ff852957;
+    overflow: hidden;
+    border-radius: 26px;
+    width: 95%;
+    height: fit-content;
+    margin: 0px auto;
+  }
+  .card img {
+    width: 100%;
+    height: 15rem;
+    border-radius: 26px;
+  }
+}
+@media (min-width: 1200px) {
+  /* السلايدر الرئيسي */
+  .con-slider {
+    height: 708px;
+    border: 1px solid #fd6e0080;
+    padding: 15px;
+    border-radius: 50px;
+    width: 65%;
+  }
+  .mySwiper2 {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 33px;
+  }
+
+  .mySwiper2 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+
+  /* الأزرار */
+  .mySwiper2 .swiper-button-next,
+  .mySwiper2 .swiper-button-prev {
+    color: #fd6f00;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .mySwiper2 .swiper-button-next:hover,
+  .mySwiper2 .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  /* السلايدر الصغير (thumbnails) */
+  .mySwiper {
+    height: 150px;
+    box-sizing: border-box;
+  }
+
+  .mySwiper .swiper-slide {
+    opacity: 0.6;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+    border-radius: 10px;
+  }
+
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  .mySwiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
   }
 }
