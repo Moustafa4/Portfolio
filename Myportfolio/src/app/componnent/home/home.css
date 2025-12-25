@@ -253,7 +253,7 @@ h5,
 
   /* exp part */
   .exp .col-4 {
-    padding: 6px 3px 6px 11px;
+    padding: 6px 3px 6px 7px;
     text-align: left;
   }
   .exp .col-4:not(:last-child) {
