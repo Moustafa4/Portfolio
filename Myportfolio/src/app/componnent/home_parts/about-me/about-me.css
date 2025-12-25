@@ -197,6 +197,8 @@ circle {
   }
   .skills_row {
     margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .skills_row .col-lg-12 {
     width: 100%;

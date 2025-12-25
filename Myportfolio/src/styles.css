@@ -28,3 +28,6 @@ body {
 .swiper-button-prev .swiper-navigation-icon {
   height: 30px;
 }
+html{
+  border: 1px solid yellow;
+}
