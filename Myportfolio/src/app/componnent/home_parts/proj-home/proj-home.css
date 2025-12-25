@@ -241,7 +241,6 @@ a.active {
     margin-top: 5px;
     width: 96%;
     height: 276px;
-    border: 1px solid red;
     display: flex;
     align-self: center;
   }

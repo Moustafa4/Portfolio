@@ -1,3 +1,6 @@
+:host {
+  --shadow: 1px 0px 7px 0px #e86400;
+}
 .container {
   margin-top: 150px;
   margin-bottom: 150px;
@@ -37,7 +40,7 @@
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
   background: rgb(255 255 255 / 10%);
-  box-shadow: inset 2px 3px 13px 1px #ff852957;
+  box-shadow: inset 1px 0px 7px 0px #e86400;
   /* box-shadow: -3px -1px 12px 3px #bf5f167a; */
 }
 .pro_img {
@@ -46,7 +49,7 @@
   margin: 0px auto;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50.5%);
+  transform: translate(-50%, -50.8%);
   bottom: 0;
 }
 .p-small {
@@ -84,12 +87,12 @@
   margin-top: 100px;
 }
 .skills_row .skills_con {
-  width: 200px;
+  width: 146px;
   min-height: 200px;
   text-align: center;
   padding-top: 10px;
   border-radius: 10px;
-  box-shadow: 2px 1px 13px 1px #ff852957;
+  box-shadow: var(--shadow);
 }
 .skills_row .col-lg-12 {
   width: 100%;
