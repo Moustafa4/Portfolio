@@ -233,7 +233,7 @@ h5,
 
   .download {
     margin-top: 3rem;
-
+    padding: 6px 14px;
   }
   .container-typing2 ol li {
     animation: slider calc(2 * 2 * 6s) steps(2) infinite;
