@@ -1,3 +1,6 @@
+:host {
+  --shadow: 1px 0px 7px 0px #e86400;
+}
 .tex-con .col-lg-3 {
   /* margin-right:40px ; */
   display: flex;
@@ -41,7 +44,7 @@
 .card {
   background: rgba(255, 255, 255, 0.053);
   border-radius: 24px;
-  box-shadow: 0px 0px 4px 0px #e1731fc1;
+  box-shadow: var(--shadow);
 }
 .card:hover {
   transform: scale(1.1);
@@ -69,7 +72,10 @@
     min-height: 100%;
     background: rgba(255, 255, 255, 0.053);
     border-radius: 24px;
-    box-shadow: 2px 2px 2px #e1731fc1;
+    box-shadow: var(--shadow);
+  }
+  .card:hover {
+    transform: none;
   }
   .col-lg-3 .card i {
     margin: 0px auto;

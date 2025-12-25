@@ -1,3 +1,6 @@
+:host {
+  --shadow: 1px 0px 7px 0px #e86400;
+}
 .main-row {
   min-height: 781px;
 }
@@ -262,7 +265,7 @@ h5,
   .exp {
     margin-top: 3rem;
     border: 1px solid rgba(255, 255, 255, 0.176);
-    box-shadow: -3px -1px 12px 3px #bf5f167a;
+    box-shadow: var(--shadow);
     border-radius: 10px;
     height: fit-content;
     padding: 0px 24px 0px 7px;
@@ -354,7 +357,7 @@ h5,
   .exp {
     margin-top: 80px;
     border: 1px solid rgba(255, 255, 255, 0.176);
-    box-shadow: -3px -1px 12px 3px #bf5f167a;
+    box-shadow: var(--shadow);
     border-radius: 10px;
     padding: 10px;
   }
@@ -492,7 +495,7 @@ h5,
   .exp {
     margin-top: 80px;
     border: 1px solid rgba(255, 255, 255, 0.176);
-    box-shadow: -3px -1px 12px 3px #bf5f167a;
+    box-shadow: var(--shadow);
     border-radius: 10px;
     padding: 10px;
   }
@@ -553,7 +556,7 @@ h5,
   .exp {
     margin-top: 80px;
     border: 1px solid rgba(255, 255, 255, 0.176);
-    box-shadow: -3px -1px 12px 3px #bf5f167a;
+    box-shadow: var(--shadow);
     border-radius: 10px;
     padding: 10px;
   }
