@@ -257,10 +257,10 @@ h5,
     padding: 6px 0px 6px 11px;
     text-align: left;
   }
-  .exp .col-4:last-child .text {
-    font-size: 17px;
+  /* .exp .col-4:last-child .text {
+    font-size: 15px;
     padding-right: 3px;
-  }
+  } */
   .exp {
     margin-top: 3rem;
     border: 1px solid rgba(255, 255, 255, 0.176);
@@ -274,7 +274,7 @@ h5,
     color: #fd6f00;
   }
   .exp .text {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     color: #dfdfdf;
   }
