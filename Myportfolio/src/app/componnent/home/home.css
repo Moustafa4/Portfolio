@@ -253,20 +253,19 @@ h5,
 
   /* exp part */
   .exp .col-4 {
-    padding: 6px 0px 6px 11px;
+    padding: 6px 3px 6px 11px;
     text-align: left;
   }
-  /* .exp .col-4:last-child .text {
-    font-size: 15px;
-    padding-right: 3px;
-  } */
+  .exp .col-4:not(:last-child) {
+    border-right: 1px solid #707070;
+  }
   .exp {
     margin-top: 3rem;
     border: 1px solid rgba(255, 255, 255, 0.176);
     box-shadow: -3px -1px 12px 3px #bf5f167a;
     border-radius: 10px;
     height: fit-content;
-    padding: 0px 9px 0px 7px;
+    padding: 0px 24px 0px 7px;
   }
   .exp .num {
     font-size: 24px;
