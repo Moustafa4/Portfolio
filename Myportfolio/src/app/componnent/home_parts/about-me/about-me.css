@@ -36,7 +36,7 @@
   border-top-right-radius: 261.5px;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
-  background: rgba(255, 255, 255, 4%);
+  background: rgb(255 255 255 / 10%);
   box-shadow: inset 2px 3px 13px 1px #ff852957;
   /* box-shadow: -3px -1px 12px 3px #bf5f167a; */
 }
@@ -157,30 +157,30 @@ circle {
     min-height: 350px;
   }
   .img-bg {
-        position: absolute;
-        height: 268.6px;
-        width: 58%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-49%, -36.2%);
-        bottom: 0;
-        border-top-left-radius: 261.5px;
-        border-top-right-radius: 261.5px;
-        border-bottom-right-radius: 12px;
-        border-bottom-left-radius: 12px;
-        background: rgb(255 255 255 / 10%);
+    position: absolute;
+    height: 268.6px;
+    width: 58%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -36.2%);
+    bottom: 0;
+    border-top-left-radius: 261.5px;
+    border-top-right-radius: 261.5px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background: rgb(255 255 255 / 10%);
   }
   .left {
     margin-bottom: 20px;
   }
   .pro_img {
-        position: absolute;
-        height: 360.88px;
-        margin: 0px auto;
-        top: 50%;
-        left: 50%;
-        transform: translate(-51%, -52.1%);
-        bottom: 0;
+    position: absolute;
+    height: 360.88px;
+    margin: 0px auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%, -52.1%);
+    bottom: 0;
   }
   .p-large {
     display: none;
@@ -264,14 +264,12 @@ circle {
     display: flex;
     flex-flow: row;
     gap: 10px;
-    border: 1px solid rgb(194, 107, 160);
     min-height: 762px;
   }
   .about-img .right {
     align-self: flex-end;
   }
   .about-img .left {
-    border: 1px solid rgb(0, 255, 34);
     position: relative;
     min-height: 596px;
   }
@@ -287,7 +285,7 @@ circle {
     border-top-right-radius: 261.5px;
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
-    background: rgba(255, 255, 255, 4%);
+    background: rgb(255 255 255 / 10%);
   }
   .pro_img {
     position: absolute;
@@ -401,7 +399,7 @@ circle {
     border-top-right-radius: 261.5px;
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
-    background: rgba(255, 255, 255, 4%);
+    background: rgb(255 255 255 / 10%);
   }
   .pro_img {
     position: absolute;

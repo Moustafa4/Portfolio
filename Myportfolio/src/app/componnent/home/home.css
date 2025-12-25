@@ -401,14 +401,13 @@ h5,
   .container-img {
     position: absolute;
 
-    background: hsla(0, 0%, 100%, 0.04);
-
+    background: rgb(255 255 255 / 10%);
     border-radius: 50%;
     width: 342px;
     height: 342px;
     border-radius: 50%;
     top: 50%;
-    transform: translate(-50%, -26.5%);
+    transform: translate(-50%, -26.75%);
     left: 50%;
   }
   .right img {
@@ -526,7 +525,7 @@ h5,
   }
   .container-img {
     position: absolute;
-    background: hsla(0, 0%, 100%, 0.04);
+    background: rgb(255 255 255 / 10%);
     border-radius: 50%;
     width: 433px;
     height: 409px;
@@ -596,7 +595,7 @@ h5,
   }
   .container-img {
     position: absolute;
-    background: hsla(0, 0%, 100%, 0.04);
+    background: rgb(255 255 255 / 10%);
     width: 560px;
     height: 560px;
     border-radius: 50%;
