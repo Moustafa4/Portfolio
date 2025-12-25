@@ -242,7 +242,7 @@ h5,
   }
   @keyframes slider {
     100% {
-      transform: translateY(calc(-2 * 6.5em));
+      transform: translateY(-200px);
     }
   }
   .container {
@@ -268,18 +268,20 @@ h5,
     overflow: visible;
     width: 100%;
   }
-  .l1 {
-    animation: none;
-  }
+  .l1,
   .l2 {
     animation: none;
   }
+  .container-typing h5 {
+    font-size: 1.5rem;
+  }
+
   .job {
-    font-size: 35px;
+    font-size: 1.8rem;
   }
-  .s2 {
+  /* .s2 {
     font-size: 33px;
-  }
+  } */
   .download {
     margin-top: 3rem;
   }
