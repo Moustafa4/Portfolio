@@ -265,7 +265,7 @@ h5,
     border: 1px solid rgba(255, 255, 255, 0.176);
     box-shadow: -3px -1px 12px 3px #bf5f167a;
     border-radius: 10px;
-    height: 112px;
+    height: fit-content;
     padding: 0px 9px 0px 7px;
   }
   .exp .num {
