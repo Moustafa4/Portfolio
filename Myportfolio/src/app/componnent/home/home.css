@@ -198,7 +198,7 @@ h5,
   }
   .container {
     margin: 0;
-    padding: 0 34px 0 34px;
+    padding: 0 34px 0 30px;
   }
   .main-row {
     min-height: 603px;
@@ -265,7 +265,8 @@ h5,
     border: 1px solid rgba(255, 255, 255, 0.176);
     box-shadow: -3px -1px 12px 3px #bf5f167a;
     border-radius: 10px;
-    padding: 10px;
+    height: 112px;
+    padding: 0px 9px 0px 7px;
   }
   .exp .num {
     font-size: 24px;
@@ -273,7 +274,7 @@ h5,
     color: #fd6f00;
   }
   .exp .text {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     color: #dfdfdf;
   }
