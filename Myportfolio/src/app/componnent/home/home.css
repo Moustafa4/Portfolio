@@ -193,7 +193,7 @@ h5,
 @media (max-width: 767px) {
   @keyframes slider {
     100% {
-      transform: translateY(calc(-2 * 5.8em));
+      transform: translateY(calc(-2 * 5.9em));
     }
   }
   .container {
