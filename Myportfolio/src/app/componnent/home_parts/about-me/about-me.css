@@ -154,36 +154,33 @@ circle {
   }
   .about-img .left {
     position: relative;
-    min-height: 564px;
+    min-height: 350px;
   }
   .img-bg {
-    position: absolute;
-    /* width: 365.64px; */
-    height: 432.6px;
-    width: 77%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -35.2%);
-    bottom: 0;
-    border-top-left-radius: 261.5px;
-    border-top-right-radius: 261.5px;
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
-    background: rgba(255, 255, 255, 4%);
+        position: absolute;
+        height: 268.6px;
+        width: 58%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-49%, -36.2%);
+        bottom: 0;
+        border-top-left-radius: 261.5px;
+        border-top-right-radius: 261.5px;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+        background: rgb(255 255 255 / 10%);
   }
   .left {
     margin-bottom: 20px;
   }
   .pro_img {
-    position: absolute;
-    height: 564.88px;
-    width: 368.7px;
-
-    margin: 0px auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50.4%);
-    bottom: 0;
+        position: absolute;
+        height: 360.88px;
+        margin: 0px auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-51%, -52.1%);
+        bottom: 0;
   }
   .p-large {
     display: none;
@@ -208,7 +205,7 @@ circle {
     gap: 15px;
   }
   .skills_row .skills_con {
-    width: 154px;
+    width: 147px;
     min-height: 200px;
     text-align: center;
   }

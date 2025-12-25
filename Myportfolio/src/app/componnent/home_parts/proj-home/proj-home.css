@@ -1,3 +1,6 @@
+:host {
+  --shadow: 1px 0px 7px 0px #e86400;
+}
 .nav-tabs {
   display: flex;
   justify-content: space-between;
@@ -12,7 +15,7 @@
   margin-right: 20px;
 }
 a.active {
-  background: #fd6f00 !important;
+  background: #f37f2473 !important;
   color: white !important;
 }
 .nav-link {
@@ -27,7 +30,7 @@ a.active {
 .card {
   background: rgba(255, 255, 255, 0.048);
   border-radius: 25px;
-  box-shadow: 2px 3px 13px 1px #ff852957;
+  box-shadow:var(--shadow);
   overflow: hidden;
   border-radius: 26px;
   width: 400px;
@@ -66,7 +69,7 @@ a.active {
   width: 150px;
   border: none;
   border-radius: 50px;
-  box-shadow: inset 2px 3px 13px 1px #ff852957;
+  box-shadow:var(--shadow)852957;
 }
 .show-btn:hover {
   transform: scale(1.1);
@@ -75,15 +78,19 @@ a.active {
 /* MOBILE */
 @media (max-width: 767px) {
   .nav-tabs li:not(:last-child) {
-  margin-right: 20px;
-  flex: 1;
-}
+    margin-right: 20px;
+    flex: 1;
+  }
   .container {
     width: 95%;
   }
   .nav-tabs {
-    width: 64%;
+    width: 96%;
     color: white;
+    text-align: center;
+  }
+  .nav-tabs .nav-item {
+    flex: 2 1 0;
   }
   .tab-content .row {
     display: flex;
@@ -94,7 +101,7 @@ a.active {
   .card {
     background: rgba(255, 255, 255, 0.048);
     border-radius: 25px;
-    box-shadow: 2px 3px 13px 1px #ff852957;
+    box-shadow:var(--shadow);
     overflow: hidden;
     border-radius: 26px;
     width: 90%;
@@ -104,7 +111,7 @@ a.active {
 
   .card img {
     width: 100%;
-    height: 16rem;
+    height: 14rem;
     border-radius: 26px;
   }
 }
@@ -118,7 +125,7 @@ a.active {
   .card {
     background: rgba(255, 255, 255, 0.048);
     border-radius: 25px;
-    box-shadow: 2px 3px 13px 1px #ff852957;
+    box-shadow:var(--shadow);
     overflow: hidden;
     border-radius: 26px;
     width: 100%;
@@ -139,7 +146,7 @@ a.active {
   .tab-pane .row .card {
     background: rgba(255, 255, 255, 0.048);
     border-radius: 25px;
-    box-shadow: 2px 3px 13px 1px #ff852957;
+    box-shadow:var(--shadow);
     overflow: hidden;
     border-radius: 26px;
     width: 100%;
@@ -160,7 +167,7 @@ a.active {
   .card {
     background: rgba(255, 255, 255, 0.048);
     border-radius: 25px;
-    box-shadow: 2px 3px 13px 1px #ff852957;
+    box-shadow:var(--shadow);
     overflow: hidden;
     border-radius: 26px;
     width: 100%;
