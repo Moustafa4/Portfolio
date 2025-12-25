@@ -47,6 +47,9 @@
   transform: scale(1.1);
 }
 @media (max-width: 767px) {
+  .tex-con {
+    margin-top: 38px;
+  }
   .texcon {
     min-width: 100%;
     min-height: 98px;
