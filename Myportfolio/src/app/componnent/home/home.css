@@ -193,7 +193,7 @@ h5,
 @media (max-width: 767px) {
   @keyframes slider {
     100% {
-      transform: translateY(calc(-2 * 2.5em));
+      transform: translateY(calc(-2 * 5.5em));
     }
   }
   .container {
@@ -233,6 +233,7 @@ h5,
 
   .download {
     margin-top: 3rem;
+
   }
   .container-typing2 ol li {
     animation: slider calc(2 * 2 * 6s) steps(2) infinite;
