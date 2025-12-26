@@ -40,9 +40,11 @@
       <div>
         <a href="{{ project()?.liveUrl }}">View Live Demo </a>
       </div>
-
-      <div><a href="{{ project()?.liveUrl }}">View on GitHub </a></div>
-      }
+      @if (project()?.type?.toLowerCase()!=="wordpress") {
+      <div>
+        <a href="{{ project()?.liveUrl }}">View on GitHub </a>
+      </div>
+      } }
     </div>
   </div>
 </div>
