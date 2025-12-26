@@ -16,7 +16,7 @@
         "/img/eldar/bwaba5.png"
       ],
       "role": "Front-end Developer",
-      "techStack": ["wordpress,PHP"],
+      "techStack": ["wordpress","HTML","CSS","JS","PHP"],
       "liveUrl": "https://dev-bwabh-aldar.pantheonsite.io/",
       "githubUrl": ""
     },
