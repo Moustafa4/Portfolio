@@ -3,16 +3,22 @@
     {
       "id": 1,
       "type": "wordpress",
-      "title": "Personal Portfolio",
+      "title": "Bwabah ElDar",
       "Duration": "3 weeks",
-      "Client": "iti",
+      "Client": "private",
       "shortDescription": "Single-page portfolio built with Angular to showcase my front-end work.",
       "image": "/img/p1.jpg",
-      "projimg": ["/img/p2.jpg", "/img/p3.jpg", "/img/p4.jpg", "/img/p1.jpg"],
+      "projimg": [
+        "/img/eldar/bwaba.png",
+        "/img/eldar/bwaba1.png",
+        "/img/eldar/bwaba2.png",
+        "/img/eldar/bwaba4.png",
+        "/img/eldar/bwaba5.png"
+      ],
       "role": "Front-end Developer",
       "techStack": ["Angular", "TypeScript", "SCSS"],
-      "liveUrl": "https://your-domain.com",
-      "githubUrl": "https://github.com/your-username/portfolio"
+      "liveUrl": "https://dev-bwabh-aldar.pantheonsite.io/",
+      "githubUrl": ""
     },
     {
       "id": 2,
