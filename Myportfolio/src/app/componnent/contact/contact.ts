@@ -43,7 +43,7 @@ export class Contact {
         'service_z1xj01g',
         'template_j1tyf8a',
         event.target as HTMLFormElement, // أو سبّي event.target لو حابة
-        { publicKey: 'ucjslz1BymbVcx29y' }
+        { publicKey: 'ajxbtn9H3g3_D4tfC' }
       )
       .then(
         (_res: EmailJSResponseStatus) => {

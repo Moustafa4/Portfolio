@@ -57,7 +57,7 @@
     <!-- Lor2 -->
     <div class="tab-pane fade" id="CustomCode" role="tabpanel">
       <div class="row gy-5">
-        @for (p of _customcode(); track p.id) {
+        @if(_customcode()){ @for (p of _customcode(); track p.id) {
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card">
             <div class="img-con">
@@ -70,7 +70,7 @@
             </div>
           </div>
         </div>
-        }
+        } }
       </div>
       @if (customCodeLength() >3 ) { @if (itemsToShow() < customCodeLength()) {
       <div class="text-center mt-4">
@@ -80,7 +80,16 @@
       <div class="text-center mt-4">
         <button class="show-btn" (click)="seeLess()">see Less</button>
       </div>
-      } }
+      } } @else {
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Coming Soon ;)</h5>
+          </div>
+        </div>
+      </div>
+
+      }
     </div>
     <!-- Lor3 -->
     <div class="tab-pane fade" id="Wordpress" role="tabpanel">
@@ -92,7 +101,9 @@
             <div class="card-body">
               <h5 class="card-title">{{ p.title }}</h5>
 
-              <a routerLink="/ProjectDetails/{{ p.id }}" target="_blank" class="btn btn-primary">Show Details</a>
+              <a routerLink="/ProjectDetails/{{ p.id }}" target="_blank" class="btn btn-primary"
+                >Show Details</a
+              >
             </div>
           </div>
         </div>
@@ -109,7 +120,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Comming Soon ;)</h5>
+              <h5 class="card-title">Coming Soon ;)</h5>
             </div>
           </div>
         </div>
@@ -146,7 +157,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Comming Soon ;)</h5>
+              <h5 class="card-title">Coming Soon ;)</h5>
             </div>
           </div>
         </div>
