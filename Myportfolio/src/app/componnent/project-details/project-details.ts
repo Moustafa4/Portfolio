@@ -19,7 +19,6 @@ register();
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ProjectDetails {
-  // @ViewChild('allTab') allTab!: ElementRef<HTMLDivElement>;
 
   private route = inject(ActivatedRoute);
   private proService = inject(ProjectServices);
@@ -40,7 +39,7 @@ export class ProjectDetails {
         this.proService.getProjectById(id).pipe(
           switchMap((currentProject) => {
             if (!currentProject) {
-              // لو المشروع مش موجود رجع مصفوفة فارغة
+       
               return of([]);
             }
             return this.proService
@@ -62,30 +61,7 @@ export class ProjectDetails {
 
   similarProjectsslice = computed(() => this.similarProjects()?.slice(0, this.itemstoshow()));
   similarProjectslen = computed(() => this.similarProjects()?.length || 0);
-  // similarProjects = toSignal<IProjects[]>(
-  //   this.route.paramMap.pipe(
-  //     map((params) => Number(params.get('id'))),
-  //     switchMap((id) =>
-  //       this.proService
-  //         .getuserbyid(id)
-  //         .pipe(
-  //           switchMap((currentProject) =>
-  //             this.proService
-  //               .getProjectByType()
-  //               .pipe(
-  //                 map((projects) =>
-  //                   projects.filter(
-  //                     (p) =>
-  //                       p.id !== currentProject.id &&
-  //                       p.techStack.some((type) => currentProject.type.includes(type))
-  //                   )
-  //                 )
-  //               )
-  //           )
-  //         )
-  //     )
-  //   )
-  // );
+  
   loadMore() {
     const width = window.innerWidth;
     if (width <= 600) {
@@ -155,14 +131,14 @@ export class ProjectDetails {
               slideShadows: true,
               depth: 6000,
               scale: 300,
-              // stretch:1,
+              stretch:1,
             },
-            // autoplay: {
-            //   delay: 5000,
-            //   pauseOnMouseEnter: true,
-            //   disableOnInteraction: true,
-            //   waitForTransition: true,
-            // },
+            autoplay: {
+              delay: 5000,
+              pauseOnMouseEnter: true,
+              disableOnInteraction: true,
+              waitForTransition: true,
+            },
             thumbs: {
               swiper: thumbsSwiper,
             },

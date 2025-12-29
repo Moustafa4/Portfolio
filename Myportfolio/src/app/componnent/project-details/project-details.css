@@ -375,7 +375,7 @@
     object-fit: cover;
   }
   .con-Tech .Tech {
-    width: 50%;
+    width: 80%;
     padding: 10px 0px;
     margin: 0px auto;
     display: flex;
@@ -511,6 +511,9 @@
   }
   .con-title .left {
     align-self: center;
+  }
+    .con-Tech .Tech {
+    width: 80%;
   }
   .card {
     background: rgba(255, 255, 255, 0.048);
