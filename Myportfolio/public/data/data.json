@@ -31,8 +31,8 @@
       "projimg": ["/img/p2.jpg", "/img/p3.jpg", "/img/p4.jpg", "/img/p1.jpg"],
       "role": "Front-end Developer",
       "techStack": ["Angular", "TypeScript", "REST API"],
-      "liveUrl": "https://your-domain.com/weather",
-      "githubUrl": "https://github.com/your-username/weather-app"
+      "liveUrl": "https://dev-clicmart11.pantheonsite.io/",
+      "githubUrl": ""
     },
     {
       "id": 3,

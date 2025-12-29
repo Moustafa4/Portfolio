@@ -1,0 +1,43 @@
+.main-con {
+  margin-top: 120px;
+}
+.footer h5 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer {
+  padding: 40px 20px;
+}
+.emailMe a,
+.list-unstyled a {
+  color: #fff;
+  text-decoration: none;
+}
+.fa-envelope {
+  margin-right: 8px;
+  color: #fff;
+}
+.emailMe a:hover {
+  color: #e86400;
+}
+.list-unstyled a,
+.footer p {
+  color: #b8b8b8;
+}
+.brand img {
+  width: 50px;
+  height: 40px;
+}
+.list-unstyled a:hover {
+  color: #e86400;
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .footer {
+    text-align: center;
+  }
+}

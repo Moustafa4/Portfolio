@@ -1,0 +1,144 @@
+form input,
+textarea {
+  width: 300px;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--mainColor);
+}
+form {
+  width: 450px;
+  height: 480px;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+form::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border-radius: 8px;
+  background: #12070f;
+}
+form > * {
+  position: relative;
+  z-index: 1;
+}
+form::before {
+  content: '';
+  position: absolute;
+  inset: 0px;
+  padding: 2px;
+  background: conic-gradient(from 0deg, var(--mainColor), #ffffff, #12070f, var(--mainColor));
+  border-radius: 10px;
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+h1 {
+  color: #fff;
+}
+.sendBtn {
+  position: relative;
+  border: 1px solid #ffffff;
+  padding: 5px 40px;
+  border-radius: 20px;
+  color: white;
+  margin-top: 20px;
+  background-color: transparent;
+}
+.sendBtn:hover {
+  color: var(--mainColor);
+  border-color: var(--mainColor);
+  transform: translateY(-2px);
+}
+.inputContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.field input {
+  width: 300px;
+  padding: 8px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--mainColor);
+  color: #fff;
+}
+.field label {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.2s ease;
+  background-color: #12070f;
+}
+.field input:focus + label,
+.field textarea:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: var(--mainColor);
+}
+.field input::placeholder {
+  color: transparent;
+}
+input[type='text']:focus,
+textarea:focus,
+input[type='email']:focus {
+  border: 1px solid var(--mainColor) !important;
+  outline: var(--mainColor);
+}
+.field p {
+  font-size: 12px;
+  color: red;
+  text-align: center;
+}
+.field textarea {
+  color: #fff;
+}
+.contact-alert {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 999px;
+  background: rgba(0, 255, 150, 0.08);
+  color: #5af2b5;
+  border: 1px solid #5af2b5;
+  font-size: 14px;
+  padding: 8px 20px;
+  animation: fadeSlideIn 0.4s ease-out;
+}
+
+.alert-danger.contact-alert {
+  background: rgba(255, 80, 120, 0.08);
+  color: #ff5078;
+  border-color: #ff5078;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

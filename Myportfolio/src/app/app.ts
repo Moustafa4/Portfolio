@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { Header } from './componnent/header/header';
 import { RouterModule } from "@angular/router";
-import { AboutMe } from "./componnent/home_parts/about-me/about-me";
-import { ProjHome } from "./componnent/home_parts/proj-home/proj-home";
+import { Footer } from "./componnent/footer/footer";
+import { Contact } from "./componnent/contact/contact";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, RouterModule,],
+  imports: [Header, RouterModule, Footer, Contact],
   templateUrl: './app.html',
   styleUrls: ['./app.css'],
 })
