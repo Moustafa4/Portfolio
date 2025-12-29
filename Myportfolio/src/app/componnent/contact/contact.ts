@@ -40,13 +40,13 @@ export class Contact {
     if (this.form.invalid) return;
     emailjs
       .sendForm(
-        'service_fpzcd7r',
-        'template_ip6w5nf',
+        'service_z1xj01g',
+        'template_j1tyf8a',
         event.target as HTMLFormElement, // أو سبّي event.target لو حابة
         { publicKey: 'ucjslz1BymbVcx29y' }
       )
       .then(
-        (res: EmailJSResponseStatus) => {
+        (_res: EmailJSResponseStatus) => {
           this.isSent = true;
           this.errorMsg = '';
           this.form.reset();
