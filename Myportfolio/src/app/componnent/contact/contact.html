@@ -1,27 +1,51 @@
-<form [formGroup]="form" (ngSubmit)="sendEmail()">
-  <div class="field">
-    <input type="text" name="user_name" formControlName="name" />
-    <label>Your Name</label>
-    <p *ngIf="name?.hasError('required') && submitted" class="text-danger">Name is required !</p>
-    <p *ngIf="name?.hasError('minlength') && submitted" class="text-danger">
-      name should be more than 3 characters
-    </p>
+<div class="container">
+  <div class="row">
+    <h1 class="text-center">Get in Touch</h1>
+    <form [formGroup]="form" (ngSubmit)="sendEmail($event)">
+      <!-- Name -->
+      <div class="inputContainer d-flex flex-column justify-content-center align-items-center">
+        <div class="field">
+          <input type="text" formControlName="name" placeholder=" " autocomplete="off" />
+          <label>Your Name</label>
+          <p *ngIf="name?.hasError('required') && submitted" class="text-danger">
+            Name is required !
+          </p>
+          <p *ngIf="name?.hasError('minlength') && submitted" class="text-danger">
+            name should be more than 3 characters
+          </p>
+        </div>
+        <!-- Email -->
+        <div class="field">
+          <input type="email" formControlName="email" placeholder=" " autocomplete="off" />
+          <label>Your Email</label>
+          <p *ngIf="email?.hasError('required') && submitted" class="text-danger">
+            Email is required !
+          </p>
+          <p *ngIf="email?.hasError('pattern') && submitted" class="text-danger">
+            Enter valid Email !
+          </p>
+        </div>
+        <!-- Message -->
+        <div class="field">
+          <textarea
+            name="message"
+            formControlName="message"
+            placeholder=" "
+            autocomplete="off"
+          ></textarea>
+          <label>Your Message</label>
+          <p *ngIf="message?.hasError('required') && submitted" class="text-danger">
+            message is required !
+          </p>
+        </div>
+        <button class="sendBtn" type="submit">Send</button>
+      </div>
+    </form>
   </div>
 
-  <div class="field">
-    <input type="email" name="user_email" formControlName="email" />
-    <label>Your Email</label>
-    <p *ngIf="email?.hasError('required') && submitted" class="text-danger">Email is required !</p>
-    <p *ngIf="email?.hasError('email') && submitted" class="text-danger">Enter valid Email !</p>
+  <div *ngIf="isSent" class="alert alert-success contact-alert">Your message has been sent!</div>
+  <div *ngIf="errorMsg" class="alert alert-danger contact-alert">
+    {{ errorMsg }}
   </div>
-
-  <div class="field">
-    <textarea name="message" formControlName="message"></textarea>
-    <label>Your Message</label>
-    <p *ngIf="message?.hasError('required') && submitted" class="text-danger">
-      message is required !
-    </p>
-  </div>
-
-  <button type="submit">Send</button>
-</form>
+</div>
+<div class="glow-line"></div>

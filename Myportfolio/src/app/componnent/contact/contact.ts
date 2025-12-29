@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
-import emailjs from '@emailjs/browser';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -15,50 +15,48 @@ export class Contact {
   isSent = false;
   errorMsg = '';
   submitted = false;
-  get name() {
-    return this.form.get('name');
-  }
-
-  get email() {
-    return this.form.get('email');
-  }
-
-  get message() {
-    return this.form.get('message');
-  }
-
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: [
+        '',
+        [Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/), Validators.required],
+      ],
       name: ['', [Validators.minLength(3), Validators.required]],
       message: ['', Validators.required],
     });
   }
+  get name() {
+    return this.form.get('name');
+  }
+  get email() {
+    return this.form.get('email');
+  }
+  get message() {
+    return this.form.get('message');
+  }
 
-  sendEmail() {
+  sendEmail(event: Event) {
     this.submitted = true;
     if (this.form.invalid) return;
-
     emailjs
-      .send(
-        'service_z1xj01g',
-        'template_j1tyf8a',
-        {
-          user_name: this.form.value.name,
-          user_email: this.form.value.email,
-          message: this.form.value.message,
-        },
-        'ajxbtn9H3g3_D4tfC'
+      .sendForm(
+        'service_fpzcd7r',
+        'template_ip6w5nf',
+        event.target as HTMLFormElement, // أو سبّي event.target لو حابة
+        { publicKey: 'ucjslz1BymbVcx29y' }
       )
       .then(
-        () => {
+        (res: EmailJSResponseStatus) => {
           this.isSent = true;
+          this.errorMsg = '';
           this.form.reset();
           this.submitted = false;
-          setTimeout(() => (this.isSent = false), 1500);
+          setTimeout(() => (this.isSent = false), 1000);
         },
-        () => {
+        (err) => {
+          this.isSent = false;
           this.errorMsg = 'Failed to send, please try again later.';
+          console.error(err);
         }
       );
   }
