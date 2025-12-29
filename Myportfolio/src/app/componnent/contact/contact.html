@@ -1,10 +1,8 @@
-<form [formGroup]="form" (ngSubmit)="sendEmail($event)">
+<form [formGroup]="form" (ngSubmit)="sendEmail()">
   <div class="field">
     <input type="text" name="user_name" formControlName="name" />
     <label>Your Name</label>
-    <p *ngIf="name?.hasError('required') && submitted" class="text-danger">
-      Name is required !
-    </p>
+    <p *ngIf="name?.hasError('required') && submitted" class="text-danger">Name is required !</p>
     <p *ngIf="name?.hasError('minlength') && submitted" class="text-danger">
       name should be more than 3 characters
     </p>
@@ -13,12 +11,8 @@
   <div class="field">
     <input type="email" name="user_email" formControlName="email" />
     <label>Your Email</label>
-    <p *ngIf="email?.hasError('required') && submitted" class="text-danger">
-      Email is required !
-    </p>
-    <p *ngIf="email?.hasError('email') && submitted" class="text-danger">
-      Enter valid Email !
-    </p>
+    <p *ngIf="email?.hasError('required') && submitted" class="text-danger">Email is required !</p>
+    <p *ngIf="email?.hasError('email') && submitted" class="text-danger">Enter valid Email !</p>
   </div>
 
   <div class="field">
