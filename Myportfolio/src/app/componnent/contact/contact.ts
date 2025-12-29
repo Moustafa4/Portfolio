@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './contact.html',
-  styleUrl: './contact.css',
+  styleUrls: ['./contact.css'],
 })
 export class Contact {
   form: FormGroup;
