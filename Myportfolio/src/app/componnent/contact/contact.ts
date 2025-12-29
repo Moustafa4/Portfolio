@@ -1,14 +1,3 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
-import emailjs from '@emailjs/browser';
-
-@Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './contact.html',
-  styleUrls: ['./contact.css'],
-})
 export class Contact {
   form: FormGroup;
   isSent = false;
@@ -21,6 +10,18 @@ export class Contact {
       name: ['', [Validators.minLength(3), Validators.required]],
       message: ['', Validators.required],
     });
+  }
+
+  get name() {
+    return this.form.get('name');
+  }
+
+  get email() {
+    return this.form.get('email');
+  }
+
+  get message() {
+    return this.form.get('message');
   }
 
   sendEmail(event: Event) {
@@ -37,7 +38,6 @@ export class Contact {
           this.isSent = true;
           this.form.reset();
           this.submitted = false;
-          setTimeout(() => (this.isSent = false), 1000);
         },
         () => {
           this.errorMsg = 'Failed to send, please try again later.';
