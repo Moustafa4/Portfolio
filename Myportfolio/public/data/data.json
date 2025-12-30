@@ -29,7 +29,13 @@
       "shortDescription": "Learnova is a comprehensive online learning platform built to help learners unlock their full potential. We offer a wide range of high-quality online courses across multiple disciplines, created by experienced instructors and industry professionals. Each course focuses on practical, real-world skills that you can apply immediately to grow your career or start a new path.At Learnova, we believe learning should be flexible and accessible. That’s why our platform allows you to learn at your own pace, from anywhere in the world, with lifetime access to course content and a smooth, user-friendly experience. Whether you’re a student, a professional, or someone looking to develop new skills, Learnova gives you the tools, knowledge, and confidence to succeed in today’s competitive digital world.",
       "image": "img/Lernova/lern1.webp",
       "projimg": [
-        "img/Lernova/lern1.webp,img/Lernova/lern2.webp,img/Lernova/lern3.webp,img/Lernova/lern4.webp,img/Lernova/lern5.webp,img/Lernova/lern6.webp,"
+        "img/Lernova/lern1.webp",
+        "img/Lernova/lern2.webp",
+        "img/Lernova/lern3.webp",
+        "img/Lernova/lern4.webp",
+        "img/Lernova/lern5.webp",
+        "img/Lernova/lern6.webp",
+        ",img/Lernova/lern2.webp,img/Lernova/lern3.webp,img/Lernova/lern4.webp,img/Lernova/lern5.webp,img/Lernova/lern7.webp,"
       ],
       "role": "Front-end Developer",
       "techStack": ["Angular", "TypeScript", "REST API"],
