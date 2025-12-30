@@ -38,11 +38,11 @@
     <div class="col-5 col-md-6 col-lg-6 right">
       @if (project()) {
       <div>
-        <a href="{{ project()?.liveUrl }}">View Live Demo </a>
+        <a href="{{ project()?.liveUrl }}" target="_blank">View Live Demo </a>
       </div>
       @if (project()?.type?.toLowerCase()!=="wordpress") {
       <div>
-        <a href="{{ project()?.liveUrl }}">View on GitHub </a>
+        <a href="{{ project()?.githubUrl }}" target="_blank">View on GitHub </a>
       </div>
       } }
     </div>
