@@ -4,8 +4,8 @@
       "id": 1,
       "type": "wordpress",
       "title": "Bwabah ElDar",
-      "Duration": "3 Day",
-      "Client": "private",
+      "Duration": "10 Day",
+      "Client": " - ",
       "shortDescription": "Bawabet Al Dar is a leading real estate platform in the United Arab Emirates, dedicated to helping users find the best residential and commercial properties. The website offers a wide range of apartments, villas, lands, and investment opportunities across the UAE, with up-to-date listings, detailed property information, and an easy-to-use search experience.",
       "image": "/img/eldar/bwaba.webp",
       "projimg": [
@@ -15,7 +15,7 @@
         "/img/eldar/bwaba3.webp",
         "/img/eldar/bwaba4.webp"
       ],
-      "role": "Front-end Developer",
+      "role": "Wordpress  Developer",
       "techStack": ["wordpress", "HTML", "CSS", "JS", "PHP"],
       "liveUrl": "https://dev-bwabh-aldar.pantheonsite.io/",
       "githubUrl": ""
@@ -45,30 +45,36 @@
     {
       "id": 3,
       "type": "wordpress",
-      "title": "Task Manager",
-      "Duration": "3 weeks",
-      "Client": "iti",
+      "title": "ClickMart",
+      "Duration": "10 Days",
+      "Client": " - ",
       "shortDescription": "Kanban-style task manager with drag-and-drop interaction.",
-      "image": "/img/p3.jpg",
-      "projimg": ["/img/p2.jpg", "/img/p3.jpg", "/img/p4.jpg", "/img/p1.jpg"],
+      "image": "img/clickmart/clic1.webp",
+      "projimg": [
+        "img/clickmart/clic1.webp",
+        "img/clickmart/clic2.webp",
+        "img/clickmart/clic3.webp",
+        "img/clickmart/clic4.webp",
+        "img/clickmart/clic5.webp"
+      ],
 
-      "role": "Front-end Developer",
-      "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
-      "liveUrl": "https://your-domain.com/tasks",
-      "githubUrl": "https://github.com/your-username/task-manager"
+      "role": "Wordpress  Developer",
+      "techStack": ["wordpress", "HTML", "CSS", "JS", "PHP"],
+      "liveUrl": "https://dev-clicmart11.pantheonsite.io/",
+      "githubUrl": ""
     },
     {
       "id": 4,
       "type": "wordpress",
-      "title": "Fasco",
-      "Duration": "3 weeks",
-      "Client": "iti",
-      "shortDescription": "Kanban-style task manager with drag-and-drop interaction.",
+      "title": "Wearly",
+      "Duration": "5 Days",
+      "Client": " - ",
+      "shortDescription": "Wearly is where timeless elegance meets modern femininity.A high-end destination for women who appreciate refined fashion, elevated details, and effortless luxury.From statement pieces to everyday essentials, Wearly curates premium clothing and accessories designed to empower confidence, celebrate individuality, and redefine sophistication. Each piece is thoughtfully selected to reflect quality, style, and a passion for fashion that goes beyond trends.",
       "image": "/img/p4.jpg",
       "projimg": ["/img/p2.jpg", "/img/p3.jpg", "/img/p4.jpg", "/img/p1.jpg"],
-      "role": "Front-end Developer",
-      "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
-      "liveUrl": "https://your-domain.com/tasks",
+      "role": "Wordpress  Developer",
+      "techStack": ["wordpress", "HTML", "CSS", "JS", "PHP"],
+      "liveUrl": "https://dev-wearly0.pantheonsite.io/",
       "githubUrl": "https://github.com/your-username/task-manager"
     },
     {
