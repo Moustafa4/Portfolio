@@ -7,13 +7,13 @@
       "Duration": "3 Day",
       "Client": "private",
       "shortDescription": "Bawabet Al Dar is a leading real estate platform in the United Arab Emirates, dedicated to helping users find the best residential and commercial properties. The website offers a wide range of apartments, villas, lands, and investment opportunities across the UAE, with up-to-date listings, detailed property information, and an easy-to-use search experience.",
-      "image": "/img/eldar/bwaba.png",
+      "image": "/img/eldar/bwaba.webp",
       "projimg": [
-        "/img/eldar/bwaba.png",
-        "/img/eldar/bwaba1.png",
-        "/img/eldar/bwaba2.png",
-        "/img/eldar/bwaba4.png",
-        "/img/eldar/bwaba5.png"
+        "/img/eldar/bwaba.webp",
+        "/img/eldar/bwaba1.webp",
+        "/img/eldar/bwaba2.webp",
+        "/img/eldar/bwaba3.webp",
+        "/img/eldar/bwaba4.webp"
       ],
       "role": "Front-end Developer",
       "techStack": ["wordpress", "HTML", "CSS", "JS", "PHP"],
