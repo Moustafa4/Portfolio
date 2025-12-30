@@ -70,8 +70,13 @@
       "Duration": "5 Days",
       "Client": " - ",
       "shortDescription": "Wearly is where timeless elegance meets modern femininity.A high-end destination for women who appreciate refined fashion, elevated details, and effortless luxury.From statement pieces to everyday essentials, Wearly curates premium clothing and accessories designed to empower confidence, celebrate individuality, and redefine sophistication. Each piece is thoughtfully selected to reflect quality, style, and a passion for fashion that goes beyond trends.",
-      "image": "/img/p4.jpg",
-      "projimg": ["/img/p2.jpg", "/img/p3.jpg", "/img/p4.jpg", "/img/p1.jpg"],
+      "image": "/img/wearly/wear.webp",
+      "projimg": [
+        "/img/wearly/wear.webp",
+        "/img/wearly/wear2.webp",
+        "/img/wearly/wear3.webp",
+        "/img/wearly/wear4.webp"
+      ],
       "role": "Wordpress  Developer",
       "techStack": ["wordpress", "HTML", "CSS", "JS", "PHP"],
       "liveUrl": "https://dev-wearly0.pantheonsite.io/",
