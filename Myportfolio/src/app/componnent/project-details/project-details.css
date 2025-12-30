@@ -374,6 +374,9 @@
     border-radius: 10px;
     object-fit: cover;
   }
+  .con-info p{
+    width: 100% !important;
+  }
   .con-Tech .Tech {
     width: 80%;
     padding: 10px 0px;
