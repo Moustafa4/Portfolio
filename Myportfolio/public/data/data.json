@@ -80,21 +80,28 @@
       "role": "Wordpress  Developer",
       "techStack": ["wordpress", "HTML", "CSS", "JS", "PHP"],
       "liveUrl": "https://dev-wearly0.pantheonsite.io/",
-      "githubUrl": "https://github.com/your-username/task-manager"
+      "githubUrl": ""
     },
     {
       "id": 5,
-      "type": "wordpress",
-      "title": "Fasco",
+      "type": "Custom Code",
+      "title": "Jumia Website ",
       "Duration": "3 weeks",
-      "Client": "iti",
-      "shortDescription": "Kanban-style task manager with drag-and-drop interaction.",
-      "image": "img/p1.jpg",
-      "projimg": ["/img/p2.jpg", "/img/p3.jpg", "/img/p4.jpg", "/img/p1.jpg"],
+      "Client": "National Telecommunication Institute (NTI)",
+      "shortDescription": "This project is an e-commerce website inspired by the Jumia platform. It represents my first web development project built using Bootstrap and CSS. The main goal of this project was to understand the fundamentals of front-end development and practice building responsive layouts using the Bootstrap framework.The website includes a modern design, organized sections, and reusable components that simulate a real online shopping experience. Through this project, I focused on improving my skills in HTML structure, CSS styling, and responsive design principles. This project marks an important step in my journey as a web developer.",
+      "image": "img/jumia/jum6.webp",
+      "projimg": [
+        "img/jumia/jum6.webp",
+        "img/jumia/jum1.webp",
+        "img/jumia/jum5.webp",
+        "img/jumia/jum4.webp",
+        "img/jumia/jum3.webp",
+        "img/jumia/jum2.webp"
+      ],
       "role": "Front-end Developer",
-      "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
-      "liveUrl": "https://your-domain.com/tasks",
-      "githubUrl": "https://github.com/your-username/task-manager"
+      "techStack": ["Bootstrab", "javaScript"],
+      "liveUrl": "https://jum-theta.vercel.app/",
+      "githubUrl": "https://github.com/Moustafa4/jum"
     },
     {
       "id": 6,
