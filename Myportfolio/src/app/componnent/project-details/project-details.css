@@ -254,15 +254,29 @@
   /* info */
   .con-info {
     width: 90%;
+    display: flex;
+    flex-direction: column !important;
+    /* border-bottom: 1px solid rgba(220, 220, 220, 0.678); */
+    border-bottom: none;
+  }
+  .con-info .row{
+    width: 100%;
+    display: flex;
+    flex-direction: column !important;
     border-bottom: 1px solid rgba(220, 220, 220, 0.678);
   }
   .con-info .left {
     padding: 0.3rem;
+    border: none;
   }
   .con-info .left p {
     width: 100%;
     padding-right: 5px;
   }
+    .con-info .right{
+      margin-top: 0px !important;
+      margin-bottom: 15px ;
+    }
   .con-info .right div {
     padding: 0px;
   }
@@ -301,7 +315,7 @@
   .con-Tech .Tech h5 {
     margin: 0;
     border: 1px solid white;
-    padding: 5px;
+    padding: 3px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.146);
     box-shadow: 0px 0px 20px 3px #fd6f0030;
