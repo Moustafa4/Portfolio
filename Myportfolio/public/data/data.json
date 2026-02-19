@@ -27,15 +27,15 @@
       "Duration": "3 weeks",
       "Client": "Digital Egypt Builders Initiative",
       "shortDescription": "Learnova is a comprehensive online learning platform built to help learners unlock their full potential. We offer a wide range of high-quality online courses across multiple disciplines, created by experienced instructors and industry professionals. Each course focuses on practical, real-world skills that you can apply immediately to grow your career or start a new path.At Learnova, we believe learning should be flexible and accessible. That’s why our platform allows you to learn at your own pace, from anywhere in the world, with lifetime access to course content and a smooth, user-friendly experience. Whether you’re a student, a professional, or someone looking to develop new skills, Learnova gives you the tools, knowledge, and confidence to succeed in today’s competitive digital world.",
-      "image": "img/Lernova/lern1.webp",
+      "image": "img/Lernova/l7.jpg",
       "projimg": [
-        "img/Lernova/lern1.webp",
-        "img/Lernova/lern2.webp",
-        "img/Lernova/lern3.webp",
-        "img/Lernova/lern4.webp",
-        "img/Lernova/lern5.webp",
-        "img/Lernova/lern6.webp",
-        "img/Lernova/lern7.webp"
+        "img/Lernova/l7.jpg",
+        "img/Lernova/l1.jpg",
+        "img/Lernova/l2.jpg",
+        "img/Lernova/l3.jpg",
+        "img/Lernova/l4.jpg",
+        "img/Lernova/l5.jpg",
+        "img/Lernova/l6.jpg"
       ],
       "role": "Front-end Developer",
       "techStack": ["Angular", "TypeScript", "REST API"],
@@ -131,7 +131,7 @@
       "Duration": "2 weeks",
       "Client": " - ",
       "shortDescription": "Touche Café is your perfect destination for premium beverages and delicious breakfast and lunch meals, all served in a cozy and modern atmosphere. Whether you’re starting your day with a fresh, flavorful breakfast or enjoying a satisfying lunch break, we bring you quality, taste, and comfort in every visit.At Touche Café, we carefully select fresh ingredients and craft every dish with attention to detail to suit every taste. Our diverse menu of hot and cold drinks perfectly complements your dining experience.For your convenience, we also offer easy online table reservations, allowing you to book your spot anytime with just a few clicks — no waiting, no hassle.✨ Touche Café… A touch of flavor that makes the difference.",
-      "image": "/img/cafe/c1.png",
+      "image": "/img/cafe/c5.png",
       "projimg": [
         "/img/cafe/c1.png",
         "/img/cafe/c2.png",
