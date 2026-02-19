@@ -39,8 +39,8 @@
       ],
       "role": "Front-end Developer",
       "techStack": ["Angular", "TypeScript", "REST API"],
-      "liveUrl": "https://learnova2.vercel.app/",
-      "githubUrl": "https://github.com/Moustafa4/learnova2"
+      "liveUrl": "https://learnova-remake.vercel.app/home",
+      "githubUrl": "https://github.com/Moustafa4/learnovaRemake"
     },
     {
       "id": 3,
@@ -123,6 +123,27 @@
       "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
       "liveUrl": "https://your-domain.com/tasks",
       "githubUrl": "https://github.com/your-username/task-manager"
+    },
+    {
+      "id": 7,
+      "type": "Custom Code",
+      "title": "Touche-Cafe",
+      "Duration": "2 weeks",
+      "Client": " - ",
+      "shortDescription": "Touche Café is your perfect destination for premium beverages and delicious breakfast and lunch meals, all served in a cozy and modern atmosphere. Whether you’re starting your day with a fresh, flavorful breakfast or enjoying a satisfying lunch break, we bring you quality, taste, and comfort in every visit.At Touche Café, we carefully select fresh ingredients and craft every dish with attention to detail to suit every taste. Our diverse menu of hot and cold drinks perfectly complements your dining experience.For your convenience, we also offer easy online table reservations, allowing you to book your spot anytime with just a few clicks — no waiting, no hassle.✨ Touche Café… A touch of flavor that makes the difference.",
+      "image": "/img/cafe/c1.png",
+      "projimg": [
+        "/img/cafe/c1.png",
+        "/img/cafe/c2.png",
+        "/img/cafe/c3.png",
+        "/img/cafe/c4.png",
+        "/img/cafe/c5.png",
+        "/img/cafe/c6.png"
+      ],
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
+      "liveUrl": "https://touche-cafe-beta.vercel.app/home",
+      "githubUrl": "https://github.com/ayaabbas286/Touche-Cafe"
     }
   ]
 }
